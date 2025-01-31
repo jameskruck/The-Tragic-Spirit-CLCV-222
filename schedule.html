@@ -3,117 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule - CLCV 222</title>
+    <title>Course Schedule - CLCV 222: The Tragic Spirit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        details { background-color: #f9fafb; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
-        summary { font-weight: bold; cursor: pointer; font-size: 1.5em; }
-        h3 { margin-top: 1rem; font-size: 1.3em; font-weight: bold; }
-        h4 { margin-top: 0.5rem; font-size: 1.2em; font-weight: bold; }
-        h5 { margin-top: 0.5rem; font-size: 1em; font-weight: bold; }
-        p { margin-left: 1rem; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        details {
+            margin-bottom: 2rem;
+        }
+        details summary {
+            cursor: pointer;
+            padding: 1rem;
+            background-color: #f3f4f6;
+            border-radius: 0.5rem;
+        }
+        details summary:hover {
+            background-color: #e5e7eb;
+        }
+        details[open] summary {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        details[open] .content {
+            padding: 1rem;
+            background-color: #f9fafb;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+        @media print {
+            .no-print { display: none; }
+            details { padding: 0; }
+            details summary { padding: 0; }
+            details .content { padding: 0; }
+            details[open] .content { padding: 0; }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit - Schedule</h1>
-                <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">Print</button>
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">
+                        Print Schedule
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold mb-4">Course Schedule</h2>
-        <p class="mb-4">Click on each section to expand the details.</p>
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h1 class="text-3xl font-bold mb-8">Course Schedule</h1>
+            
+            <div class="note mb-6 bg-blue-50 p-4 rounded">
+                <p class="text-sm">*Please note that this schedule may be adjusted based on class needs and interests*</p>
+                <p class="text-sm mt-2">Content warnings will be provided for particularly sensitive material.</p>
+            </div>
 
-        <section id="week1-3">
+            <!-- Weeks 1-3 -->
             <details>
-                <summary>Weeks 1-3: Introducing Tragedy and Cultural Perspectives</summary>
-                <ul class="list-disc pl-6">
-                    <li><strong>Week 1:</strong> Understanding tragic form and context</li>
-                    <li>Critical approaches to ancient performance</li>
-                    <li>Multiple cultural perspectives on tragedy</li>
-                    <li><em>Readings:</em> Selections from Nicole Loraux, "Tragic Ways of Killing a Woman"; Dan-el Padilla Peralta on marginalized voices.</li>
-                </ul>
-                <ul class="list-disc pl-6 mt-2">
-                    <li><strong>Week 2:</strong> Justice and Gender in the Ancient World</li>
-                    <li>Tragic perspectives on justice</li>
-                    <li>Women's voices in ancient drama</li>
-                    <li><em>Readings:</em> Froma Zeitlin, "Playing the Other"; Edith Hall on tragic performance and cultural identity.</li>
-                </ul>
-                <ul class="list-disc pl-6 mt-2">
-                    <li><strong>Week 3:</strong> Oresteia - Beginning the Cycle</li>
-                    <li>Libation Bearers and vengeance</li>
-                    <li>Family obligations across cultures</li>
-                    <li>Maternal power and resistance</li>
-                    <li><em>Readings:</em> Aeschylus, Agamemnon (complete); bell hooks on tragedy and intersectionality.</li>
-                </ul>
+                <summary>
+                    <h2 class="text-2xl font-bold text-gray-800 uppercase inline">INTRODUCING TRAGEDY AND CULTURAL PERSPECTIVES (Weeks 1-3)</h2>
+                </summary>
+                <div class="content">
+                    <div class="ml-4">
+                        <h3 class="text-xl font-semibold mb-4">Week 1: Introduction to Greek Tragedy</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Understanding tragic form and context</li>
+                            <li>Critical approaches to ancient performance</li>
+                            <li>Multiple cultural perspectives on tragedy</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Selections from Nicole Loraux, "Tragic Ways of Killing a Woman"</li>
+                            <li>Dan-el Padilla Peralta on tragic performance and marginalized voices</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 2: Justice and Gender in the Ancient World</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Tragic perspectives on justice</li>
+                            <li>Women's voices in ancient drama</li>
+                            <li>Chorus and community response</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Froma Zeitlin, "Playing the Other"</li>
+                            <li>Edith Hall on tragic performance and cultural identity</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 3: Oresteia - Beginning the Cycle</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Libation Bearers and vengeance</li>
+                            <li>Family obligations across cultures</li>
+                            <li>Maternal power and resistance</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Agamemnon (complete)</li>
+                            <li>bell hooks on tragedy and intersectionality</li>
+                            <li>Simon Goldhill on performance and democracy</li>
+                        </ul>
+                    </div>
+                </div>
             </details>
-        </section>
-		<section id="week4-6">
-    <details>
-        <summary>Weeks 4-6: Justice and Transformation</summary>
-        <ul class="list-disc pl-6">
-            <li><strong>Week 4:</strong> Oresteia - Cycles of Violence</li>
-            <li>Libation Bearers and vengeance</li>
-            <li>Family obligations across cultures</li>
-            <li>Maternal power and resistance</li>
-            <li><em>Readings:</em> Aeschylus, Libation Bearers (complete); Patricia Johnson, "Blood-Stained Hands: Female Power and Ritual"</li>
-            <li>First Critical Analysis Project Due</li>
-        </ul>
-        <ul class="list-disc pl-6 mt-2">
-            <li><strong>Week 5:</strong> Oresteia - Justice Transformed</li>
-            <li>The Furies and social change</li>
-            <li>Transformation of justice systems</li>
-            <li>Gender and divine power</li>
-            <li><em>Readings:</em> Aeschylus, The Furies (complete); Judith Butler on gender performance in tragedy</li>
-            <li>Global adaptations of the justice theme</li>
-            <li>Rebecca Bushnell on tragic justice across cultures</li>
-        </ul>
-        <ul class="list-disc pl-6 mt-2">
-            <li><strong>Week 6:</strong> The Oresteia in Modern Context</li>
-            <li>Contemporary productions</li>
-            <li>Cultural adaptations</li>
-            <li>Political interpretations</li>
-            <li><em>Readings:</em> Selected modern adaptations; Helene Foley on tragic patterns in modern drama</li>
-            <li>First Reaction Paper Due</li>
-        </ul>
-    </details>       
-<<h3>Weeks 7-9: Fate and Individual Choice</h3>
-<details>
-    <summary><h4>Weeks 7-9: Fate and Individual Choice (Expand/Collapse)</h4></summary>
-    <h4>Week 7: Oedipus the King</h4>
-    <p>Free will versus fate</p>
-    <p>Knowledge and power</p>
-    <p>Cultural approaches to prophecy</p>
-    <h5>Readings</h5>
-    <p>Sophocles, Oedipus the King (first half)</p>
-    <p>Wole Soyinka on tragedy and Yoruba drama</p>
-    <p>Rush Rehm on performance context</p>
 
-    <h4>Week 8: Oedipus and Identity</h4>
-    <p>Personal versus public identity</p>
-    <p>Cross-cultural views of incest taboos</p>
-    <p>Leadership and responsibility</p>
-    <h5>Readings</h5>
-    <p>Sophocles, Oedipus the King (second half)</p>
-    <p>Fred Moten on Black radical traditions</p>
-    <p>Second Critical Analysis Project Workshop</p>
+            <!-- Weeks 4-6 -->
+            <details>
+                <summary>
+                    <h2 class="text-2xl font-bold text-gray-800 uppercase inline">JUSTICE AND TRANSFORMATION (Weeks 4-6)</h2>
+                </summary>
+                <div class="content">
+                    <div class="ml-4">
+                        <h3 class="text-xl font-semibold mb-4">Week 4: Oresteia - Cycles of Violence</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Libation Bearers and vengeance</li>
+                            <li>Family obligations across cultures</li>
+                            <li>Maternal power and resistance</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Libation Bearers (complete)</li>
+                            <li>Patricia Johnson, "Blood-Stained Hands: Female Power and Ritual"</li>
+                            <li>Contemporary adaptations of Clytemnestra's story</li>
+                        </ul>
+                        <p class="font-medium text-blue-600 mb-4">First Critical Analysis Project Due</p>
 
-    <h4>Week 9: Antigone and Resistance</h4>
-    <p>Civil disobedience</p>
-    <p>Gender and political power</p>
-    <p>Family versus state</p>
-    <h5>Readings</h5>
-    <p>Sophocles, Antigone (complete)</p>
-    <p>Judith Butler, "Antigone's Claim"</p>
-    <p>Tina Chanter on race and Antigone</p>
-    <p>Second Reaction Paper Due</p>
-</details>
-    </main>
+                        <h3 class="text-xl font-semibold mb-4">Week 5: Oresteia - Justice Transformed</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>The Furies and social change</li>
+                            <li>Transformation of justice systems</li>
+                            <li>Gender and divine power</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>The Furies (complete)</li>
+                            <li>Judith Butler on gender performance in tragedy</li>
+                            <li>Global adaptations of the justice theme</li>
+                            <li>Rebecca Bushnell on tragic justice across cultures</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 6: The Oresteia in Modern Context</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Contemporary productions</li>
+                            <li>Cultural adaptations</li>
+                            <li>Political interpretations</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Selected modern adaptations</li>
+                            <li>Helene Foley on tragic patterns in modern drama</li>
+                        </ul>
+                        <p class="font-medium text-blue-600 mb-4">First Reaction Paper Due</p>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Weeks 7-9 -->
+            <details>
+                <summary>
+                    <h2 class="text-2xl font-bold text-gray-800 uppercase inline">FATE AND INDIVIDUAL CHOICE (Weeks 7-9)</h2>
+                </summary>
+                <div class="content">
+                    <div class="ml-4">
+                        <h3 class="text-xl font-semibold mb-4">Week 7: Oedipus the King</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Free will versus fate</li>
+                            <li>Knowledge and power</li>
+                            <li>Cultural approaches to prophecy</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Oedipus the King (first half)</li>
+                            <li>Wole Soyinka on tragedy and Yoruba drama</li>
+                            <li>Rush Rehm on performance context</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 8: Oedipus and Identity</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Personal versus public identity</li>
+                            <li>Cross-cultural views of incest taboos</li>
+                            <li>Leadership and responsibility</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Oedipus the King (second half)</li>
+                            <li>Fred Moten on Black radical traditions</li>
+                        </ul>
+                        <p class="font-medium mb-4">Second Critical Analysis Project Workshop</p>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 9: Antigone and Resistance</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Civil disobedience</li>
+                            <li>Gender and political power</li>
+                            <li>Family versus state</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Antigone (complete)</li>
+                            <li>Judith Butler, "Antigone's Claim"</li>
+                            <li>Tina Chanter on race and Antigone</li>
+                        </ul>
+                        <p class="font-medium text-blue-600 mb-4">Second Reaction Paper Due</p>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Weeks 10-13 -->
+            <details>
+                <summary>
+                    <h2 class="text-2xl font-bold text-gray-800 uppercase inline">GENDER AND POWER (Weeks 10-13)</h2>
+                </summary>
+                <div class="content">
+                    <div class="ml-4">
+                        <h3 class="text-xl font-semibold mb-4">Week 10: Medea and Cultural Identity</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Outsider status and power</li>
+                            <li>Gender and colonialism</li>
+                            <li>Vengeance across cultures</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Medea (first half)</li>
+                            <li>Edith Hall, "Medea and Cultural Identity"</li>
+                            <li>Contemporary feminist interpretations</li>
+                            <li>Non-Western adaptations of Medea</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 11: Medea's Choices</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Infanticide in tragic context</li>
+                            <li>Women's agency and power</li>
+                            <li>Marriage across cultures</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Medea (second half)</li>
+                            <li>Deborah Boedeker on Medea's different faces</li>
+                            <li>Global performances of Medea</li>
+                        </ul>
+                        <p class="font-medium text-blue-600 mb-4">Third Reaction Paper Due</p>
+
+                        <h3 class="text-xl font-semibold mb-4">Week 12: Bacchae and Religious Identity</h3>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Divine and human power</li>
+                            <li>Gender performance and identity</li>
+                            <li>Religious ecstasy and control</li>
+                        </ul>
+                        <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                        <ul class="list-disc ml-6 mb-6">
+                            <li>Bacchae (complete)</li>
+                            <li>Charles Segal on dionysiac religion</li>
+                            <li>Contemporary queer readings</li>
+                            <li>Performances in non-Western contexts</li>
+                        </ul> 
+						<h3 class="text-xl font-semibold mb-4">Week 13: The Bacchae in Modern Context</h3>
+                       <ul class="list-disc ml-6 mb-4">
+                           <li>Contemporary religious parallels</li>
+                           <li>Gender fluidity in ancient/modern context</li>
+                           <li>Violence and society</li>
+                       </ul>
+                       <h4 class="text-lg font-medium mb-2">Readings:</h4>
+                       <ul class="list-disc ml-6 mb-6">
+                           <li>Helen Foley on modern productions</li>
+                           <li>Froma Zeitlin on gender performance</li>
+                           <li>Global religious perspectives</li>
+                       </ul>
+                   </div>
+               </div>
+           </details>
+
+           <!-- Weeks 14-16 -->
+           <details>
+               <summary>
+                   <h2 class="text-2xl font-bold text-gray-800 uppercase inline">ROMAN RECEPTION AND TRANSFORMATION (Weeks 14-16)</h2>
+               </summary>
+               <div class="content">
+                   <div class="ml-4">
+                       <h3 class="text-xl font-semibold mb-4">Week 14: Seneca's Tragic Vision</h3>
+                       <ul class="list-disc ml-6 mb-4">
+                           <li>Stoic philosophy and tragedy</li>
+                           <li>Roman adaptation of Greek models</li>
+                           <li>Political power and performance</li>
+                       </ul>
+                       <p class="font-medium mb-4">Individual Project Consultations</p>
+                       <p class="font-medium mb-4">Workshop Sessions</p>
+
+                       <h3 class="text-xl font-semibold mb-4">Week 15: Contemporary Resonance</h3>
+                       <ul class="list-disc ml-6 mb-4">
+                           <li>Student Presentations</li>
+                           <li>Modern Adaptations</li>
+                           <li>Global Reception</li>
+                       </ul>
+                       <p class="font-medium mb-4">Final Project Development</p>
+                       <p class="font-medium mb-4">Group Discussions</p>
+
+                       <h3 class="text-xl font-semibold mb-4">Week 16: Looking Forward</h3>
+                       <ul class="list-disc ml-6 mb-4">
+                           <li>Synthesizing Perspectives</li>
+                           <li>Contemporary Applications</li>
+                           <li>Future Directions</li>
+                       </ul>
+                       <p class="font-medium text-blue-600 mb-4">Final Projects Due</p>
+                       <p class="font-medium mb-4">Course Reflection</p>
+                   </div>
+               </div>
+           </details>
+       </div>
+   </main>
 </body>
 </html>

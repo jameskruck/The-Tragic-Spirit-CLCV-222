@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - CLCV 222</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit - Assignments</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">Print</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="overview.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Overview</a>
+                    <a href="structure.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Structure</a>
+                    <a href="assignments.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900">Assignments</a>
+                    <a href="schedule.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                    <a href="policies.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Policies</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-2xl font-bold mb-4">Assignments Overview</h2>
+            <p class="mb-4">Assignments in this course are designed to be flexible and inclusive, allowing you to engage with Greek and Roman tragedy in ways that align with your interests and learning styles.</p>
+
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold mb-3">First Week Engagement: Your Connection (5%)</h3>
+                <p class="mb-2">Choose ONE of the following prompts to respond to in 300-400 words:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Share a story from your own cultural tradition that deals with themes of tragedy.</li>
+                    <li>Describe a performance, adaptation, or retelling of a classical story that resonated with you.</li>
+                    <li>Reflect on how your own cultural background might influence how you approach these ancient texts.</li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold mb-3">Participation and Engagement (15%)</h3>
+                <p>There are multiple ways to engage, including:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Contributing to class discussions.</li>
+                    <li>Participating in small group activities.</li>
+                    <li>Submitting reading responses.</li>
+                    <li>Leading a discussion on a topic of interest.</li>
+                    <li>Digital discussion board contributions.</li>
+                </ul>
+            </section>
+
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold mb-3">Critical Analysis Projects (40%)</h3>
+                <p>Two major analytical projects allow you to explore tragic texts through different lenses:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Project 1: Multiple Perspectives on a Tragic Text (15%)</li>
+                    <li>Project 2: Tragedy in Contemporary Context (25%)</li>
+                </ul>
+                <p>Options include written essays, digital presentations, or creative adaptations.</p>
+            </section>
+
+            <section class="mb-8">
+                <h3 class="text-xl font-semibold mb-3">Final Project (20%)</h3>
+                <p>Instead of a final exam, you’ll complete a project demonstrating your understanding of course themes. Formats include:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Traditional research paper.</li>
+                    <li>Comparative cultural analysis.</li>
+                    <li>Digital portfolio or interactive presentation.</li>
+                    <li>Public engagement project.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 no-print">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>
+        </div>
+    </footer>
+</body>
+</html>

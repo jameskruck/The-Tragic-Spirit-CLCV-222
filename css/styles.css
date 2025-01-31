@@ -227,7 +227,9 @@ details[open] .content {
     font-size: 1.5rem;
     line-height: 2rem;
 }
-
+h2 {
+  text-transform: none;
+}
 .uppercase {
     text-transform: uppercase;
 }

@@ -7,85 +7,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        details { background-color: #f9fafb; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+        summary { font-weight: bold; cursor: pointer; }
+        a { color: #1d4ed8; text-decoration: none; }
     </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex">
-                    <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit - Schedule</h1>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">Print</button>
-                </div>
+                <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit - Schedule</h1>
+                <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">Print</button>
             </div>
         </nav>
     </header>
-    
+
     <nav class="bg-gray-800 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="overview.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Overview</a>
-                    <a href="structure.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Structure</a>
-                    <a href="assignments.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Assignments</a>
-                    <a href="schedule.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900">Schedule</a>
-                    <a href="policies.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Policies</a>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:text-white">Home</a>
+                    <a href="overview.html" class="text-gray-300 hover:text-white">Course Overview</a>
+                    <a href="structure.html" class="text-gray-300 hover:text-white">Course Structure</a>
+                    <a href="assignments.html" class="text-gray-300 hover:text-white">Assignments</a>
+                    <a href="schedule.html" class="text-white bg-gray-900 px-3 py-2 rounded-md">Schedule</a>
+                    <a href="policies.html" class="text-gray-300 hover:text-white">Policies</a>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-lg shadow-sm p-6">
-            <h2 class="text-2xl font-bold mb-4">Course Schedule</h2>
-            <p class="mb-4">Below is the tentative schedule for the course. Readings and assignments are subject to change based on class discussions and needs.</p>
-            
-            <section class="mb-8">
-                <h3 class="text-xl font-semibold mb-3">Weeks 4-6: Justice and Transformation</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Cycles of violence and justice</li>
-                    <li>Maternal power and gender in tragedy</li>
-                    <li>Readings: Aeschylus, The Furies; Butler on gender performance</li>
-                </ul>
-            </section>
+        <h2 class="text-2xl font-bold mb-4">Course Schedule</h2>
+        <p class="mb-4">Click on each section to expand the details.</p>
 
-            <section class="mb-8">
-                <h3 class="text-xl font-semibold mb-3">Weeks 7-9: Fate and Individual Choice</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Oedipus and the struggle with destiny</li>
-                    <li>Antigone and civil disobedience</li>
-                    <li>Readings: Sophocles, Oedipus the King; Judith Butler on Antigone</li>
-                </ul>
-            </section>
+        <ul class="mb-4">
+            <li><a href="#week1-3">Weeks 1-3: Introduction</a></li>
+            <li><a href="#week4-6">Weeks 4-6: Justice and Transformation</a></li>
+            <li><a href="#week7-9">Weeks 7-9: Fate and Individual Choice</a></li>
+            <li><a href="#week10-13">Weeks 10-13: Gender and Power</a></li>
+            <li><a href="#week14-16">Weeks 14-16: Roman Reception</a></li>
+        </ul>
 
-            <section class="mb-8">
-                <h3 class="text-xl font-semibold mb-3">Weeks 10-13: Gender and Power</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Medea and cultural identity</li>
-                    <li>Bacchae and religious identity</li>
-                    <li>Readings: Euripides, Medea; Bacchae; Hall on Medea’s identity</li>
+        <section id="week1-3">
+            <details>
+                <summary>Weeks 1-3: Introducing Tragedy and Cultural Perspectives</summary>
+                <ul class="list-disc pl-6">
+                    <li><strong>Week 1:</strong> Understanding tragic form and context</li>
+                    <li>Critical approaches to ancient performance</li>
+                    <li>Multiple cultural perspectives on tragedy</li>
+                    <li><em>Readings:</em> Selections from Nicole Loraux, "Tragic Ways of Killing a Woman"; Dan-el Padilla Peralta on marginalized voices.</li>
                 </ul>
-            </section>
+                <ul class="list-disc pl-6 mt-2">
+                    <li><strong>Week 2:</strong> Justice and Gender in the Ancient World</li>
+                    <li>Tragic perspectives on justice</li>
+                    <li>Women's voices in ancient drama</li>
+                    <li><em>Readings:</em> Froma Zeitlin, "Playing the Other"; Edith Hall on tragic performance and cultural identity.</li>
+                </ul>
+                <ul class="list-disc pl-6 mt-2">
+                    <li><strong>Week 3:</strong> Oresteia - Beginning the Cycle</li>
+                    <li>Libation Bearers and vengeance</li>
+                    <li>Family obligations across cultures</li>
+                    <li>Maternal power and resistance</li>
+                    <li><em>Readings:</em> Aeschylus, Agamemnon (complete); bell hooks on tragedy and intersectionality.</li>
+                </ul>
+            </details>
+        </section>
+		<section id="week4-6">
+    <details>
+        <summary>Weeks 4-6: Justice and Transformation</summary>
+        <ul class="list-disc pl-6">
+            <li><strong>Week 4:</strong> Oresteia - Cycles of Violence</li>
+            <li>Libation Bearers and vengeance</li>
+            <li>Family obligations across cultures</li>
+            <li>Maternal power and resistance</li>
+            <li><em>Readings:</em> Aeschylus, Libation Bearers (complete); Patricia Johnson, "Blood-Stained Hands: Female Power and Ritual"</li>
+            <li>First Critical Analysis Project Due</li>
+        </ul>
+        <ul class="list-disc pl-6 mt-2">
+            <li><strong>Week 5:</strong> Oresteia - Justice Transformed</li>
+            <li>The Furies and social change</li>
+            <li>Transformation of justice systems</li>
+            <li>Gender and divine power</li>
+            <li><em>Readings:</em> Aeschylus, The Furies (complete); Judith Butler on gender performance in tragedy</li>
+            <li>Global adaptations of the justice theme</li>
+            <li>Rebecca Bushnell on tragic justice across cultures</li>
+        </ul>
+        <ul class="list-disc pl-6 mt-2">
+            <li><strong>Week 6:</strong> The Oresteia in Modern Context</li>
+            <li>Contemporary productions</li>
+            <li>Cultural adaptations</li>
+            <li>Political interpretations</li>
+            <li><em>Readings:</em> Selected modern adaptations; Helene Foley on tragic patterns in modern drama</li>
+            <li>First Reaction Paper Due</li>
+        </ul>
+    </details>
+</section>
 
-            <section class="mb-8">
-                <h3 class="text-xl font-semibold mb-3">Weeks 14-16: Roman Reception and Contemporary Perspectives</h3>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Seneca's adaptation of Greek tragedy</li>
-                    <li>Modern adaptations and performances</li>
-                    <li>Readings: Seneca’s tragedies; Foley on modern performances</li>
-                </ul>
-            </section>
-            
-            <p class="mt-6">Final projects due in Week 16. Review sessions and student presentations will conclude the course.</p>
-        </div>
     </main>
-    
+
     <footer class="bg-white border-t border-gray-200 no-print">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>

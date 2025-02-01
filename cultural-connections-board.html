@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Connections Discussion Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h1 class="text-2xl font-bold mb-4">Cultural Connections Discussion Board</h1>
+            
+            <!-- Assignment Instructions -->
+            <div class="bg-gray-50 p-4 rounded mb-6">
+                <h2 class="text-xl font-semibold mb-3">First Week Engagement: Your Connection</h2>
+                <p class="mb-4">Choose ONE of the following prompts to respond to:</p>
+                <ul class="list-disc pl-6 space-y-2 mb-4">
+                    <li>Share a story from your own cultural tradition that deals with themes we find in tragedy (family, justice, fate, morality)</li>
+                    <li>Describe a performance, adaptation, or retelling of a classical story that resonated with you (or that you disagreed with)</li>
+                    <li>Reflect on how your own cultural background might influence how you approach these ancient texts</li>
+                </ul>
+                <p class="text-sm text-gray-600">Your initial post should be 300-400 words. Later, you'll read and respond to your classmates' posts.</p>
+            </div>
+
+            <!-- Create New Post -->
+            <div class="mb-6">
+                <h2 class="text-lg font-semibold mb-3">Create Your Post</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block font-medium mb-2">Title</label>
+                        <input 
+                            type="text" 
+                            id="post-title"
+                            class="w-full border rounded p-2"
+                            placeholder="Give your story/reflection a title..."
+                        >
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-2">Which prompt are you responding to?</label>
+                        <select id="post-prompt" class="w-full border rounded p-2">
+                            <option value="cultural-story">Cultural Story/Tradition</option>
+                            <option value="classical-adaptation">Classical Adaptation/Performance</option>
+                            <option value="cultural-perspective">Personal Cultural Perspective</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-medium mb-2">Your Response</label>
+                        <textarea 
+                            id="post-content"
+                            class="w-full border rounded p-2 min-h-[200px]"
+                            placeholder="Share your story or reflection here..."
+                        ></textarea>
+                    </div>
+                    <button 
+                        onclick="createPost()"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                    >
+                        Share Your Story
+                    </button>
+                </div>
+            </div>
+
+            <!-- Posts Display -->
+            <div>
+                <h2 class="text-lg font-semibold mb-3">Class Stories & Reflections</h2>
+                <div class="space-y-4" id="posts-container">
+                    <!-- Posts will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Template -->
+    <template id="post-template">
+        <div class="bg-gray-50 p-4 rounded">
+            <h3 class="text-lg font-semibold mb-2"></h3>
+            <div class="text-sm text-gray-600 mb-2"></div>
+            <p class="mb-4"></p>
+            <div class="border-t pt-4">
+                <h4 class="font-medium mb-2">Responses</h4>
+                <div class="space-y-3 responses-container">
+                    <!-- Responses will be inserted here -->
+                </div>
+                <div class="mt-4">
+                    <textarea 
+                        class="w-full border rounded p-2 mb-2 response-input"
+                        placeholder="Share your response (100-150 words)..."
+                        rows="3"
+                    ></textarea>
+                    <button 
+                        class="bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700 response-button"
+                    >
+                        Add Response
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        // Store posts in localStorage
+        let posts = JSON.parse(localStorage.getItem('culturalPosts')) || [];
+
+        function createPost() {
+            const title = document.getElementById('post-title').value;
+            const prompt = document.getElementById('post-prompt').value;
+            const content = document.getElementById('post-content').value;
+
+            if (!title || !content) {
+                alert('Please fill in both title and content');
+                return;
+            }
+
+            const post = {
+                id: Date.now(),
+                title,
+                prompt,
+                content,
+                responses: [],
+                date: new Date().toLocaleDateString()
+            };
+
+            posts.unshift(post);
+            localStorage.setItem('culturalPosts', JSON.stringify(posts));
+            
+            displayPosts();
+            clearForm();
+        }
+
+        function addResponse(postId) {
+            const post = posts.find(p => p.id === postId);
+            const responseContainer = document.querySelector(`[data-post-id="${postId}"]`);
+            const responseInput = responseContainer.querySelector('.response-input');
+            
+            if (!responseInput.value) {
+                alert('Please write a response');
+                return;
+            }
+
+            const response = {
+                id: Date.now(),
+                content: responseInput.value,
+                date: new Date().toLocaleDateString()
+            };
+
+            post.responses.push(response);
+            localStorage.setItem('culturalPosts', JSON.stringify(posts));
+            
+            displayPosts();
+        }
+
+        function displayPosts() {
+            const container = document.getElementById('posts-container');
+            container.innerHTML = '';
+
+            posts.forEach(post => {
+                const template = document.getElementById('post-template');
+                const postElement = template.content.cloneNode(true);
+                
+                const postDiv = postElement.querySelector('div');
+                postDiv.dataset.postId = post.id;
+                
+                postElement.querySelector('h3').textContent = post.title;
+                postElement.querySelector('.text-sm').textContent = 
+                    `Posted on ${post.date} • Responding to: ${post.prompt}`;
+                postElement.querySelector('p').textContent = post.content;
+
+                const responsesContainer = postElement.querySelector('.responses-container');
+                post.responses.forEach(response => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'bg-white p-3 rounded';
+                    responseDiv.innerHTML = `
+                        <p class="mb-1">${response.content}</p>
+                        <div class="text-sm text-gray-600">Posted on ${response.date}</div>
+                    `;
+                    responsesContainer.appendChild(responseDiv);
+                });
+
+                const responseButton = postElement.querySelector('.response-button');
+                responseButton.addEventListener('click', () => addResponse(post.id));
+
+                container.appendChild(postElement);
+            });
+        }
+
+        function clearForm() {
+            document.getElementById('post-title').value = '';
+            document.getElementById('post-content').value = '';
+        }
+
+        // Initial display
+        displayPosts();
+    </script>
+</body>
+</html>

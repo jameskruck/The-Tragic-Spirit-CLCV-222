@@ -4,6 +4,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f9fafb;
+	scroll-behavior: smooth;
 }
 
 /* Header styles */
@@ -18,6 +19,12 @@ header nav {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    background-color: white;
 }
 
 @media (min-width: 640px) {
@@ -124,7 +131,7 @@ nav[aria-label="Breadcrumb"] .text-gray-900 {
 /* Main content styles */
 main {
     max-width: 80rem;
-    margin-left: auto;
+    margin-left: 250px;  /* Ensure it aligns properly */
     margin-right: auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;

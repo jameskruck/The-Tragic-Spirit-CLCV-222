@@ -25,7 +25,7 @@
             </div>
         </nav>
     </header>
-    
+
     <!-- Navigation -->
     <nav class="bg-gray-800 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container flex">
         <!-- Sidebar Navigation -->
         <div class="sidebar no-print">
@@ -57,15 +57,18 @@
         <!-- Main Content Area -->
         <main class="main-content">
             <div class="bg-white rounded-lg shadow-sm p-6">
-                <!-- Course Welcome -->
                 <section id="welcome" class="mb-8">
                     <h2 class="text-2xl font-bold mb-4">Course Welcome</h2>
                     <div class="prose max-w-none">
-                        <p class="mb-4">Hi! I'm James, and I'm excited to explore Greek and Roman tragedy with you this semester...</p>
+                        <p class="mb-4">Hi! I'm James, and I'm excited to explore Greek and Roman tragedy with you this semester. When I'm not teaching or researching, you might find me on one of my bikes (How many bikes does one need? The answer is always N+1!). What started with a vintage Bianchi road bike has turned into a full-blown passion for cycling, complete with increasingly ambitious rural routes and a growing collection of bikes in various states of repair. When I'm not out seeking zen on a bike, I'm likely to be found cheering for perpetually disappointing sports teams (looking at you, Las Vegas Raiders) or introducing my three boys to the joys of visiting petting zoos.</p>
+
+                        <p class="mb-4">Beyond cycling, my academic passion lies in examining how these ancient texts speak to fundamental questions of the human experience that transcend cultural boundaries. You might wonder why we should read these works today, especially if they seem distant from your own cultural traditions. While these plays emerged from specific historical contexts in Greece and Rome, they have been continuously reinterpreted by diverse cultures worldwide - from African adaptations of Antigone addressing post-colonial identity to Japanese productions of Medea exploring gender roles, to Caribbean reimaginings of the Oresteia examining justice and revenge.</p>
+
+                        <p class="mb-4">These works raise universal questions about power, justice, family loyalty, gender roles, and moral choice - themes that resonate across cultures but may be understood very differently based on one's background and experiences. Throughout the semester, we'll examine not only the original contexts of these plays, but also how various communities have challenged, adapted, and transformed these stories to address their own cultural concerns and experiences.</p>
+
+                        <p>Please don't hesitate to reach out during office hours or by email if you have questions or want to discuss these ideas further. I'm here to support your intellectual journey as we explore why these complex texts continue to provoke debate and inspire reinterpretation across cultural boundaries.</p>
                     </div>
                 </section>
-    
-                <!-- Contact Information -->
                 <section id="contact" class="mb-8">
                     <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
                     <div class="bg-gray-50 rounded-lg p-4">
@@ -81,61 +84,14 @@
                             <div>
                                 <dt class="text-sm font-medium text-gray-500">Email</dt>
                                 <dd class="mt-1 text-sm text-gray-900">
-                                    <a href="mailto:jkruck@illinois.edu" class="text-blue-600 hover:text-blue-800 underline">
-    jkruck@illinois.edu
-</a>
+                                    <a href="mailto:jkruck@illinois.edu" class="text-blue-600 hover:text-blue-800 underline">jkruck@illinois.edu</a>
                                 </dd>
                             </div>
                         </dl>
                     </div>
                 </section>
-    
-                <!-- Course Digital Tools -->
-                <section id="digital-tools" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Course Digital Tools</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <a href="guided-reading-template.html" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors">
-                            <h3 class="font-semibold mb-2">Guided Reading Tool</h3>
-                            <p class="text-sm text-gray-600">Structure your reading and preparation for class discussions</p>
-                        </a>
-                    </div>
-                </section>
             </div>
         </main>
     </div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".sidebar-link");
-
-            function highlightActiveSection() {
-                let currentSection = "";
-    
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-                    const sectionHeight = section.offsetHeight;
-                    const scrollPosition = window.scrollY + 150;
-    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        currentSection = section.getAttribute("id");
-                    }
-                });
-    
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    link.removeAttribute("aria-current");
-    
-                    if (link.getAttribute("href").slice(1) === currentSection) {
-                        link.classList.add("active");
-                        link.setAttribute("aria-current", "page");
-                    }
-                });
-            }
-    
-            window.addEventListener("scroll", highlightActiveSection);
-            highlightActiveSection();
-        });
-    </script>
 </body>
 </html>

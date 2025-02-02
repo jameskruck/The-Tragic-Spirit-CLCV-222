@@ -6,248 +6,84 @@
     <title>Guided Reading Tool</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-100 p-4">
-    <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg shadow-lg p-6">
-            <h1 class="text-2xl font-bold mb-6">Guided Reading Assignment</h1>
-            
-            <!-- Tab Navigation -->
-            <div class="border-b mb-4">
-                <ul class="flex flex-wrap -mb-px" id="tabList" role="tablist">
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button active" 
-                                id="elos-tab" 
-                                data-target="elos-content">
-                            Learning Outcomes
-                        </button>
-                    </li>
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                                id="purpose-tab" 
-                                data-target="purpose-content">
-                            Purpose
-                        </button>
-                    </li>
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                                id="knowledge-tab" 
-                                data-target="knowledge-content">
-                            Knowledge & Skills
-                        </button>
-                    </li>
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                                id="tasks-tab" 
-                                data-target="tasks-content">
-                            Tasks
-                        </button>
-                    </li>
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                                id="criteria-tab" 
-                                data-target="criteria-content">
-                            Success Criteria
-                        </button>
-                    </li>
-                    <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                                id="workspace-tab" 
-                                data-target="workspace-content">
-                            Reading Workspace
-                        </button>
-                    </li>
-                </ul>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">
+                        Print Guided Reading Tool
+                    </button>
+                </div>
             </div>
-
-            <!-- Tab Content -->
-            <div class="tab-content">
-                <!-- Learning Outcomes Content -->
-                <div id="elos-content" class="tab-pane active">
-                    <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Expected Learning Outcomes</h2>
-                        <p class="mb-3">After completing this guided reading, you will be able to:</p>
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li>Analyze classical texts through close reading and critical interpretation</li>
-                            <li>Identify key themes and concepts in relation to cultural contexts</li>
-                            <li>Develop connections between ancient texts and contemporary discussions</li>
-                            <li>Articulate your own cultural perspective in relation to the text</li>
-                        </ul>
+        </nav>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex items-center">
+                    <div class="flex space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="overview.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Overview</a>
+                        <a href="structure.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Structure</a>
+                        <a href="assignments.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Assignments</a>
+                        <a href="schedule.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                        <a href="policies.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Policies</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-6">Guided Reading Assignment</h1>
+        
+        <!-- Tab Navigation -->
+        <div class="border-b mb-4">
+            <ul class="flex flex-wrap -mb-px" id="tabList" role="tablist">
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button active" 
+                            id="elos-tab" 
+                            data-target="elos-content">
+                        Learning Outcomes
+                    </button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
+                            id="purpose-tab" 
+                            data-target="purpose-content">
+                        Purpose
+                    </button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
+                            id="tasks-tab" 
+                            data-target="tasks-content">
+                        Tasks
+                    </button>
+                </li>
+            </ul>
+        </div>
 
-                <!-- Purpose Content -->
-                <div id="purpose-content" class="tab-pane hidden">
-                    <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Purpose</h2>
-                        <p class="mb-3">This guided reading process develops critical skills that extend beyond the classroom:</p>
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li>Analytical reading strategies applicable to any complex text</li>
-                            <li>Cultural awareness and comparative analysis abilities</li>
-                            <li>Self-directed learning and metacognitive skills</li>
-                            <li>Evidence-based argumentation and interpretation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Knowledge & Skills Content -->
-                <div id="knowledge-content" class="tab-pane hidden">
-                    <div class="bg-gray-50 p-4 rounded mb-4 space-y-4">
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Knowledge:</h3>
-                            <ul class="list-disc pl-6 space-y-2">
-                                <li>Understanding of classical tragic themes and forms</li>
-                                <li>Recognition of cultural contexts and influences</li>
-                                <li>Awareness of diverse interpretive approaches</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Skills:</h3>
-                            <ul class="list-disc pl-6 space-y-2">
-                                <li>Close reading and textual analysis</li>
-                                <li>Cross-cultural comparison and interpretation</li>
-                                <li>Critical reflection and self-assessment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tasks Content -->
-                <div id="tasks-content" class="tab-pane hidden">
-                    <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Reading Process Steps:</h2>
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2">1. Before Reading:</h3>
-                                <ul class="list-disc pl-6 space-y-2">
-                                    <li>Review provided context and background</li>
-                                    <li>Set personal reading goals</li>
-                                    <li>Note initial questions</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2">2. During Reading:</h3>
-                                <ul class="list-disc pl-6 space-y-2">
-                                    <li>Identify and define key terms</li>
-                                    <li>Track major themes</li>
-                                    <li>Record personal reactions</li>
-                                    <li>Note cultural connections</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2">3. After Reading:</h3>
-                                <ul class="list-disc pl-6 space-y-2">
-                                    <li>Summarize main points</li>
-                                    <li>Develop discussion questions</li>
-                                    <li>Reflect on learning</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Success Criteria Content -->
-                <div id="criteria-content" class="tab-pane hidden">
-                    <div class="bg-gray-50 p-4 rounded mb-4">
-                        <h2 class="text-xl font-semibold mb-3">Criteria for Success</h2>
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2">Engagement:</h3>
-                                <ul class="list-disc pl-6 space-y-2">
-                                    <li>Complete all sections of the reading response</li>
-                                    <li>Show evidence of thoughtful reading</li>
-                                    <li>Include specific textual references</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2">Analysis:</h3>
-                                <ul class="list-disc pl-6 space-y-2">
-                                    <li>Clear identification of themes</li>
-                                    <li>Meaningful cultural connections</li>
-                                    <li>Thoughtful discussion questions</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reading Workspace Content -->
-                <div id="workspace-content" class="tab-pane hidden">
-                    <div class="space-y-6">
-                        <!-- Before Reading Section -->
-                        <section>
-                            <h3 class="text-lg font-semibold mb-4">Before Reading</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block font-medium mb-2">Reading Goals</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="What do you hope to learn from this text?"
-                                        data-save="before-goals"
-                                    ></textarea>
-                                </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Initial Questions</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="What questions do you have before starting?"
-                                        data-save="before-questions"
-                                    ></textarea>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- During Reading Section -->
-                        <section>
-                            <h3 class="text-lg font-semibold mb-4">During Reading</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block font-medium mb-2">Key Terms & Themes</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="Note important terms, concepts, and themes..."
-                                        data-save="during-terms"
-                                    ></textarea>
-                                </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Cultural Connections</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="How does this connect to your cultural experience?"
-                                        data-save="during-connections"
-                                    ></textarea>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- After Reading Section -->
-                        <section>
-                            <h3 class="text-lg font-semibold mb-4">After Reading</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <label class="block font-medium mb-2">Reflection</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="How has your understanding developed?"
-                                        data-save="after-reflection"
-                                    ></textarea>
-                                </div>
-                                <div>
-                                    <label class="block font-medium mb-2">Discussion Questions</label>
-                                    <textarea 
-                                        class="w-full border rounded p-2 min-h-[100px]"
-                                        placeholder="What would you like to discuss in class?"
-                                        data-save="after-questions"
-                                    ></textarea>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="elos-content" class="tab-pane active">
+                <div class="bg-gray-50 p-4 rounded mb-4">
+                    <h2 class="text-xl font-semibold mb-3">Expected Learning Outcomes</h2>
+                    <p class="mb-3">After completing this guided reading, you will be able to:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Analyze classical texts through close reading and critical interpretation</li>
+                        <li>Identify key themes and concepts in relation to cultural contexts</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -257,39 +93,10 @@
         // Tab switching functionality
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.tab-button').forEach(b => {
-                    b.classList.remove('active');
-                    b.classList.remove('border-blue-600');
-                });
-                
-                // Hide all tab content
-                document.querySelectorAll('.tab-pane').forEach(pane => {
-                    pane.classList.add('hidden');
-                });
-                
-                // Show selected tab content
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
                 button.classList.add('active');
-                button.classList.add('border-blue-600');
-                const target = button.getAttribute('data-target');
-                document.getElementById(target).classList.remove('hidden');
-            });
-        });
-
-        // Auto-save functionality
-        document.querySelectorAll('[data-save]').forEach(element => {
-            // Load saved content
-            const savedContent = localStorage.getItem(element.getAttribute('data-save'));
-            if (savedContent) {
-                element.value = savedContent;
-            }
-
-            // Save content on change
-            element.addEventListener('input', (e) => {
-                localStorage.setItem(
-                    e.target.getAttribute('data-save'),
-                    e.target.value
-                );
+                document.getElementById(button.getAttribute('data-target')).classList.remove('hidden');
             });
         });
     </script>

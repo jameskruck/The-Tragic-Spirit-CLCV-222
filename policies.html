@@ -6,123 +6,10 @@
     <title>Policies - CLCV 222: The Tragic Spirit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            scroll-behavior: smooth;
-        }
-        
-        /* Header and Navigation Styles */
-        .header-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 30;
-            background-color: white;
-        }
-
-        .main-nav {
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            background-color: #1f2937;
-        }
-
-        .breadcrumb-nav {
-            position: fixed;
-            top: 112px;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            background-color: white;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 144px;
-            width: 250px;
-            height: calc(100vh - 144px);
-            overflow-y: auto;
-            padding: 1rem;
-            background-color: #f9fafb;
-            border-right: 1px solid #e5e7eb;
-            z-index: 5;
-        }
-        
-        .sidebar-nav {
-            position: sticky;
-            top: 1rem;
-        }
-
-        .sidebar-link {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: #4b5563;
-            text-decoration: none;
-            border-left: 2px solid transparent;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
-        }
-
-        .sidebar-link:hover {
-            color: #1d4ed8;
-            background-color: #f3f4f6;
-            border-left-color: #1d4ed8;
-        }
-
-        .sidebar-link.active {
-            color: #1d4ed8;
-            border-left-color: #1d4ed8;
-            font-weight: 500;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            margin-left: 250px;
-            margin-top: 144px; /* Match fixed header height */
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-            .main-content {
-                margin-left: 0;
-            }
-        }
-
-        @media print {
-            .sidebar, .no-print {
-                display: none;
-            }
-            .main-content {
-                margin-left: 0;
-                margin-top: 0;
-            }
-            .header-nav, .main-nav, .breadcrumb-nav {
-                position: static;
-            }
-        }
-
-        section {
-            scroll-margin-top: 160px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="header-nav shadow-sm no-print">
+    <header class="bg-white shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -138,9 +25,9 @@
             </div>
         </nav>
     </header>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav no-print">
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-800 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
                 <div class="flex items-center">
@@ -156,219 +43,63 @@
             </div>
         </div>
     </nav>
-
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumb-nav no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center space-x-2 h-10 text-sm">
-                <span class="text-gray-500">CLCV 222</span>
-                <span class="text-gray-300">/</span>
-                <span class="text-gray-900 font-medium">Policies</span>
+    
+    <div class="container flex">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar no-print">
+            <nav class="sidebar-nav">
+                <a href="#supporting-success" class="sidebar-link">Supporting your Success</a>
+                <a href="#learning-support" class="sidebar-link">Learning Support</a>
+                <a href="#accessibility" class="sidebar-link">Accessibility</a>
+                <a href="#communication" class="sidebar-link">Communication</a>
+                <a href="#attendance" class="sidebar-link">Attendance</a>
+                <a href="#assignments" class="sidebar-link">Assignment Policies</a>
+                <a href="#technology" class="sidebar-link">Technology</a>
+                <a href="#academic-integrity" class="sidebar-link">Academic Integrity</a>
+                <a href="#campus-resources" class="sidebar-link">Campus Resources</a>
+            </nav>
+        </div>
+    
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h1 class="text-3xl font-bold mb-8">Course Policies and Resources</h1>
+                <section id="supporting-success" class="mb-12">
+                    <h2 class="text-2xl font-bold mb-4">Supporting your Success</h2>
+                    <p>I want everyone to succeed in this course! You've worked hard to be here and I want this to be an enjoyable experience for you.</p>
+                </section>
+                <section id="learning-support" class="mb-12">
+                    <h2 class="text-2xl font-bold mb-4">Learning Support</h2>
+                    <p>Course materials are available in multiple formats to accommodate diverse learning styles.</p>
+                </section>
             </div>
-        </div>
-    </nav>
-
-     <!-- Sidebar Navigation -->
-    <div class="sidebar no-print">
-        <nav class="sidebar-nav">
-            <a href="#supporting-success" class="sidebar-link">Supporting your Success</a>
-            <a href="#learning-support" class="sidebar-link">Learning Support</a>
-            <a href="#accessibility" class="sidebar-link">Accessibility</a>
-            <a href="#communication" class="sidebar-link">Communication</a>
-            <a href="#attendance" class="sidebar-link">Attendance</a>
-            <a href="#assignments" class="sidebar-link">Assignment Policies</a>
-            <a href="#technology" class="sidebar-link">Technology</a>
-            <a href="#academic-integrity" class="sidebar-link">Academic Integrity</a>
-            <a href="#campus-resources" class="sidebar-link">Campus Resources</a>
-        </nav>
+        </main>
     </div>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="bg-white rounded-lg shadow-sm p-6">
-            <h1 class="text-3xl font-bold mb-8">Course Policies and Resources</h1>
-
-            <section id="supporting-success" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Supporting your Success</h2>
-                <p class="mb-4">I want everyone to succeed in this course! You've worked hard to be here and I want this to be an enjoyable experience for you. Available support includes:</p>
-                
-                <h3 class="text-xl font-semibold mb-3">Academic Support</h3>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Writing Center consultations</li>
-                    <li>Research librarian assistance</li>
-                    <li>Study groups</li>
-                    <li>Technology support</li>
-                    <li>Tutoring services</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold mb-3">Personal Support</h3>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Counselling services</li>
-                    <li>Food pantry</li>
-                    <li>Emergency financial aid</li>
-                    <li>Basic needs assistance</li>
-                    <li>Crisis support</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold mb-3">Course-Specific Support</h3>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Additional office hours by appointment</li>
-                    <li>Study guides</li>
-                    <li>Practice problems</li>
-                    <li>Review sessions</li>
-                    <li>Peer mentoring</li>
-                </ul>
-            </section>
-
-            <section id="learning-support" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Learning Support and Flexibility</h2>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Course materials available in multiple formats (text, audio, digital)</li>
-                    <li>Choice in assignment formats (written, oral, visual, digital)</li>
-                    <li>Structured notes and study guides provided before class</li>
-                    <li>Recording of lectures available upon request</li>
-                    <li>Alternative participation options for class discussions</li>
-                    <li>Extended time options built into assignment design</li>
-                    <li>Regular comprehension checks during class sessions</li>
-                </ul>
-            </section>
-
-            <section id="accessibility" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Accessibility</h2>
-                <p class="mb-4">I am committed to creating an accessible learning environment for all students. This means:</p>
-                <ul class="list-disc ml-6 space-y-2 mb-6">
-                    <li>Multiple ways to access course content</li>
-                    <li>Flexible approaches to demonstrate your learning</li>
-                    <li>Clear instructions and expectations</li>
-                    <li>Proactive accommodations planning</li>
-                    <li>Regular breaks during class sessions</li>
-                    <li>Content warnings for sensitive material</li>
-                    <li>Technology accommodations as needed</li>
-                </ul>
-
-                <p class="mb-4">If you have a disability or any other circumstances that affect your learning:</p>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>You are encouraged to meet with me early in the semester</li>
-                    <li>We can develop a plan that works for you</li>
-                    <li>All discussions will remain confidential</li>
-                    <li>No documentation is required to request basic flexibility</li>
-                </ul>
-            </section>
-
-            <section id="communication" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Communication</h2>
-                <p class="mb-4">Open communication is essential for your success:</p>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Email is the best way to reach me</li>
-                    <li>I typically respond within 24 hours (M-F)</li>
-                    <li>Let me know if you'll miss class</li>
-                    <li>Reach out early if you're having difficulties</li>
-                    <li>Don't hesitate to ask for clarification or help</li>
-                </ul>
-            </section>
-
-            <section id="attendance" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Attendance and Participation</h2>
-                <p class="mb-4">While attendance is important for your learning, I understand that life happens:</p>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Notify me in advance about planned absences</li>
-                    <li>Contact me if you're unwell</li>
-                    <li>We can work together to keep you on track</li>
-                    <li>Missing class won't automatically lower your grade</li>
-                    <li>Multiple ways to demonstrate participation</li>
-                </ul>
-            </section>
-
-            <section id="assignments" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Assignment Policies</h2>
-                <p class="mb-4">I aim to be flexible while maintaining fairness:</p>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Early feedback on initial assignments to help you adjust to course expectations</li>
-                    <li>Mid-semester individual check-ins to discuss your progress</li>
-                    <li>Draft reviews available for major assignments</li>
-                    <li>Multiple attempts allowed on certain assessments</li>
-                    <li>Two "no questions asked" 48-hour extensions</li>
-                    <li>Option to revise and resubmit one major assignment</li>
-                    <li>Weekly office hours for individual feedback</li>
-                    <li>Anonymous suggestion box for course improvements</li>
-                </ul>
-            </section>
-
-            <section id="technology" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Technology in the Classroom</h2>
-                <p class="mb-4">This course uses several digital tools to enhance learning:</p>
-                <ul class="list-disc ml-6 space-y-2 mb-6">
-                    <li><a href="guided-reading-template.html" class="text-blue-600 hover:text-blue-800 underline">Guided Reading Tool</a> for reading preparation</li>
-                    <li><a href="cultural-connections-board.html" class="text-blue-600 hover:text-blue-800 underline">Cultural Connections Board</a> for discussions</li>
-                    <li><a href="whos-in-class-survey.html" class="text-blue-600 hover:text-blue-800 underline">Who's in Class? Survey</a> for class planning</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold mb-3">Additional Encouraged Uses</h3>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Taking notes</li>
-                    <li>Accessing course readings</li>
-                    <li>Collaborative activities</li>
-                    <li>Research during designated times</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold mb-3">Guidelines</h3>
-                <ul class="list-disc ml-6 mb-4">
-                    <li>Mute all notifications during class</li>
-                    <li>Use technology primarily for course-related activities</li>
-                    <li>Be mindful of how your technology use might affect others</li>
-                    <li>Let me know if you need technological accommodations</li>
-                </ul>
-
-                <p class="mt-4 text-sm italic">Note: If technology becomes a distraction, we will discuss alternative approaches as a class.</p>
-            </section>
-
-            <section id="academic-integrity" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Academic Integrity</h2>
-                <p class="mb-4">In this course, academic integrity means:</p>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Properly citing sources in your work</li>
-                    <li>Submitting your own original analysis</li>
-                    <li>Contributing equitably to group work</li>
-                    <li>Respecting intellectual property rights</li>
-                    <li>Asking questions when unsure about citation practices</li>
-                </ul>
-                <p class="mt-4">I'm happy to discuss any questions about proper citation and collaboration.</p>
-            </section>
-
-            <section id="campus-resources" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Additional Campus Resources</h2>
-                <ul class="list-disc ml-6 space-y-2">
-                    <li>Writers Workshop for writing support</li>
-                    <li>Library Subject Guides for research help</li>
-                    <li>Counseling Center for personal support</li>
-                    <li>McKinley Health for medical services</li>
-                    <li>Emergency Dean for crisis situations</li>
-                </ul>
-            </section>
-        </div>
-    </main>
-
+    
     <script>
-        // Highlight active section in sidebar based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.sidebar-link');
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".sidebar-link");
 
-            let currentSection = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentSection) {
-                    link.classList.add('active');
-                }
-            });
+            function highlightActiveSection() {
+                let currentSection = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= sectionTop - 150) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    link.removeAttribute("aria-current");
+                    if (link.getAttribute("href").slice(1) === currentSection) {
+                        link.classList.add("active");
+                        link.setAttribute("aria-current", "page");
+                    }
+                });
+            }
+            window.addEventListener("scroll", highlightActiveSection);
+            highlightActiveSection();
         });
     </script>
 </body>

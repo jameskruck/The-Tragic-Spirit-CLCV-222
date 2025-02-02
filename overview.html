@@ -173,7 +173,7 @@
     <!-- Sidebar Navigation -->
     <div class="sidebar no-print">
         <nav>
-            <a href="#description" class="sidebar-link">Course Description</a>
+            <a href="#description" class="sidebar-link">Course Description aria-current="page">Course Description</a>
             <a href="#objectives" class="sidebar-link">Learning Objectives</a>
             <a href="#digital-resources" class="sidebar-link">Digital Resources</a>
             <a href="#technology" class="sidebar-link">Technology Requirements</a>
@@ -206,9 +206,9 @@
             </section>
 
             <!-- Learning Objectives -->
-            <section class="mb-8">
+            <section id="objectives" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Learning Objectives</h2>
-                <div class="bg-gray-50 rounded-lg p-6">
+                <div class="prose max-w-none">
                     <p class="mb-4">Upon completion of this course, students will be able to:</p>
                     <ul class="list-disc pl-6 space-y-2">
                         <li>Analyze how Greek and Roman tragic texts explore fundamental questions of power, justice, and human experience through close reading and critical interpretation</li>
@@ -220,9 +220,9 @@
             </section>
 
             <!-- Digital Resources & Support -->
-            <section class="mb-8">
+            <section id="digital-resources" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Digital Resources & Support</h2>
-                <div class="bg-gray-50 rounded-lg p-6">
+               <div class="prose max-w-none">
                     <p class="mb-4">To support your learning in this blended course, we'll use several digital tools:</p>
                     <div class="space-y-6">
                         <div>
@@ -258,10 +258,9 @@
             </section>
 
             <!-- Technology Requirements -->
-            <section class="mb-8">
+            <section id="technology" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Technology Requirements</h2>
-                <div class="bg-gray-50 rounded-lg p-6">
-                    <ul class="list-disc pl-6 space-y-2">
+<div class="prose max-w-none">                    <ul class="list-disc pl-6 space-y-2">
                         <li>Internet access for accessing course materials and tools</li>
                         <li>Device capable of viewing PDFs and web content</li>
                         <li>Basic web browser (Chrome, Firefox, Safari, or Edge)</li>
@@ -271,7 +270,7 @@
             </section>
 
             <!-- Course Community Guidelines -->
-            <section class="mb-8">
+            <section id="community" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Course Community Guidelines</h2>
                 <div class="bg-blue-50 rounded-lg p-6">
                     <p class="mb-4">Our learning community:</p>
@@ -286,7 +285,7 @@
             </section>
 
             <!-- Required Texts -->
-            <section class="mb-8">
+            <section id="texts" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Required Texts and Materials</h2>
                 
                 <div class="bg-blue-50 rounded-lg p-6 mb-6">
@@ -313,7 +312,7 @@
                           href="https://www.perseus.tufts.edu/hopper/" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                          Herbert Weir Smyth translation (Perseus Digital Library)<span class="text-sm">↗</span>
+                          Herbert Weir Smyth translation (Perseus Digital Library)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                     <li>
@@ -322,7 +321,7 @@
                           href="https://www.poetryintranslation.com/PITBR/Greek/Greekhome.php#Aeschylus" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline"> 
-                          Tony Kline translation (Poetry in Translation)<span class="text-sm">↗</span>
+                          Tony Kline translation (Poetry in Translation)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                 </ul>
@@ -338,7 +337,7 @@
                           href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0011.tlg002.perseus-eng2:1-80/" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                          Sir Richard Jebb translation (Perseus Digital Library)<span class="text-sm">↗</span>
+                          Sir Richard Jebb translation (Perseus Digital Library)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                     <li>
@@ -347,7 +346,7 @@
                           href="http://classics.mit.edu/Browse/browse-Sophocles.html" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                          Francis Storr translation (MIT Classics Archive)<span class="text-sm">↗</span>
+                          Francis Storr translation (MIT Classics Archive)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                 </ul>
@@ -362,8 +361,8 @@
                         <a 
                           href="https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:0-85/" 
                           target="_blank" 
-                          rel="noopener noreferrer" class=text-blue-600 hover:text-blue-800 underline>
-                          E.P. Coleridge translation (Perseus Digital Library)<span class="text-sm">↗</span>
+                          rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
+                          E.P. Coleridge translation (Perseus Digital Library)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                     <li>
@@ -372,7 +371,7 @@
                           href="https://gutenberg.ca/ebooks/murrayeuripides-medea/murrayeuripides-medea-00-h.html" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                          Gilbert Murray translation (Project Gutenberg)<span class="text-sm">↗</span>
+                          Gilbert Murray translation (Project Gutenberg)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                 </ul>
@@ -388,7 +387,7 @@
                           href="https://www.gutenberg.org/cache/epub/57999/pg57999-images.html#PHOENISSAE" 
                           target="_blank" 
                           rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                          Frank Justus Miller translation (Project Gutenberg)<span class="text-sm">↗</span>
+                          Frank Justus Miller translation (Project Gutenberg)<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span>
                         </a>
                     </li>
                     <li>
@@ -412,10 +411,10 @@
                     <div>
                         <h3 class="text-xl font-semibold mb-3">Free Digital Resources:</h3>
                         <ul class="list-disc pl-6 space-y-2">
-                            <li><a href="http://www.perseus.tufts.edu" class="text-blue-600 hover:text-blue-800">Perseus Digital Library </a></li>
-                            <li><a href-"http://www.poetryintranslation.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">Poetry in Translation<span class="text-sm" role="img" aria-label="external link">↗</span>
+                            <li><a href="http://www.perseus.tufts.edu" class="text-blue-600 hover:text-blue-800">Perseus Digital Library<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span></a></li>
+                            <li><a href="http://www.poetryintranslation.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Poetry in Translation<span class="text-sm" role="img" aria-label="external link">↗</span>
   <span class="visually-hidden">(opens in a new tab)</span></a></li>
-                            <li><a href=""http://classics.mit.edu"
+                            <li><a href="http://classics.mit.edu"
    target="_blank"
    rel="noopener noreferrer"
    class="text-blue-600 hover:text-blue-800 underline">
@@ -423,8 +422,11 @@
   <span class="text-sm" role="img" aria-label="external link">↗</span>
   <span class="visually-hidden">(opens in a new tab)</span>
 </a></li>
-								<li><a href="http://gutenberg.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800>Project Gutenberg<span class="text-sm" role-'img" aria-label="external link">↗</span>
-  <span class="visually-hidden">(opens in a new tab)</span></a>
+								<li><a href="https://gutenberg.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
+    Project Gutenberg
+    <span class="text-sm" role="img" aria-label="external link">↗</span>
+    <span class="visually-hidden">(opens in a new tab)</span>
+</a>
                         </ul>
                     </div>
 
@@ -443,28 +445,32 @@
         </div>
     </main>
 <script>
-        // Highlight active section in sidebar based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.sidebar-link');
+    // Highlight active section in sidebar based on scroll position
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.sidebar-link');
 
-            let currentSection = '';
+        let currentSection = '';
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentSection) {
-                    link.classList.add('active');
-                }
-            });
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 150) {
+                currentSection = section.getAttribute('id');
+            }
         });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+
+            if (link.getAttribute('href').slice(1) === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    });
     </script>
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 no-print">
-        <div class="max-w-7xl mx-auto py-6 px
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <p class="text-gray-500 text-sm text-center">© 2024 CLCV 222. All rights reserved.</p>
+    </div>
+</footer>

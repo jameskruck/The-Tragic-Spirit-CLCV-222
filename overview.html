@@ -3,126 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Overview - CLCV 222: The Tragic Spirit</title>
+    <title>Course Schedule - CLCV 222: The Tragic Spirit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
-    <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            scroll-behavior: smooth;
-        }
-        
-        /* Header and Navigation Styles */
-        .header-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 30;
-            background-color: white;
-        }
-
-        .main-nav {
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            z-index: 20;
-            background-color: #1f2937;
-        }
-
-        .breadcrumb-nav {
-            position: fixed;
-            top: 112px;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            background-color: white;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 144px;
-            width: 250px;
-            height: calc(100vh - 144px);
-            overflow-y: auto;
-            padding: 1rem;
-            background-color: #f9fafb;
-            border-right: 1px solid #e5e7eb;
-            z-index: 5;
-        }
-        
-        .sidebar-nav {
-            position: sticky;
-            top: 1rem;
-        }
-
-        .sidebar-link {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: #4b5563;
-            text-decoration: none;
-            border-left: 2px solid transparent;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
-        }
-
-        .sidebar-link:hover {
-            color: #1d4ed8;
-            background-color: #f3f4f6;
-            border-left-color: #1d4ed8;
-        }
-
-        .sidebar-link.active {
-            color: #1d4ed8;
-            border-left-color: #1d4ed8;
-            font-weight: 500;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            margin-left: 250px;
-            margin-top: 144px;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .sidebar {
-                display: none;
-            }
-            .main-content {
-                margin-left: 0;
-            }
-        }
-
-        @media print {
-            .sidebar, .no-print {
-                display: none;
-            }
-            .main-content {
-                margin-left: 0;
-                margin-top: 0;
-            }
-            .header-nav, .main-nav, .breadcrumb-nav {
-                position: static;
-            }
-        }
-
-        section {
-            scroll-margin-top: 160px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
+<body class="bg-gray-50 flex flex-col min-h-screen">
     <header class="header-nav shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -139,8 +25,7 @@
             </div>
         </nav>
     </header>
-
-    <!-- Main Navigation -->
+  <!-- Main Navigation -->
     <nav class="main-nav no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
@@ -164,15 +49,16 @@
             <div class="flex items-center space-x-2 h-10 text-sm">
                 <span class="text-gray-500">CLCV 222</span>
                 <span class="text-gray-300">/</span>
-                <span class="text-gray-900 font-medium">Course Overview</span>
+                <span class="text-gray-900 font-medium">Course Structure</span>
             </div>
         </div>
     </nav>
 
-<div class="container">
-    <!-- Sidebar Navigation -->
-    <div class="sidebar no-print">
-        <nav>
+        <!-- Content Wrapper (Sidebar + Main Content) -->
+<div class="flex flex-grow">
+        <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+            <nav class="sidebar-nav">
             <a href="#description" class="sidebar-link" aria-current="page">Course Description</a>
             <a href="#objectives" class="sidebar-link">Learning Objectives</a>
             <a href="#digital-resources" class="sidebar-link">Digital Resources</a>
@@ -180,13 +66,15 @@
             <a href="#community" class="sidebar-link">Community Guidelines</a>
             <a href="#texts" class="sidebar-link">Required Texts</a>
         </nav>
-    </div>
+        </aside>
 
     <!-- Main Content Area -->
-    <main class="main-content">
+            <div class="flex flex-col flex-grow">
+    <main class="main-content flex-grow">
+    <div class="bg-white rounded-lg shadow-sm p-6">
         <section id="description">
             <h2 class="text-2xl font-bold mb-4">Course Description</h2>
-          <div class="prose max-w-none">
+                          <div class="bg-blue-50 rounded-lg p-6 mb-8">
                     <p class="mb-4">This course examines Greek and Roman tragic literature as windows into both ancient and modern conversations about what it means to be human. These texts have been claimed, contested, and reimagined by readers across time and cultures - sometimes as tools of colonialism and cultural dominance, other times as vehicles for resistance and cultural reclamation.</p>
                     
                     <p class="mb-4">Our investigation challenges traditional interpretations by:</p>
@@ -201,14 +89,13 @@
             <p class="mb-4">The readings will examine not only how these ancient authors understood their world, but also how different communities today - from postcolonial writers to feminist scholars to non-Western artists - have engaged with, challenged, and reimagined these works.</p>
                     
             <p>Every reader brings their own cultural background and lived experience to these texts. You'll be encouraged to develop your own critical relationship with these works - whether that means finding unexpected connections to your own traditions, challenging problematic aspects of these texts, or both.</p>
-                    <p>&nbsp;</p>
             </div>
             </section>
 
             <!-- Learning Objectives -->
             <section id="objectives" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Learning Objectives</h2>
-                <div class="prose max-w-none">
+                                <div class="bg-gray-50 rounded-lg p-6">
                     <p class="mb-4">Upon completion of this course, students will be able to:</p>
                     <ul class="list-disc pl-6 space-y-2">
                         <li>Analyze how Greek and Roman tragic texts explore fundamental questions of power, justice, and human experience through close reading and critical interpretation</li>
@@ -222,7 +109,7 @@
             <!-- Digital Resources & Support -->
             <section id="digital-resources" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Digital Resources & Support</h2>
-               <div class="prose max-w-none">
+                <div class="bg-blue-50 rounded-lg p-6">
                     <p class="mb-4">To support your learning in this blended course, we'll use several digital tools:</p>
                     <div class="space-y-6">
                         <div>
@@ -260,7 +147,7 @@
             <!-- Technology Requirements -->
             <section id="technology" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Technology Requirements</h2>
-<div class="prose max-w-none">                    <ul class="list-disc pl-6 space-y-2">
+<div class="bg-gray-50 rounded-lg p-6">                 <ul class="list-disc pl-6 space-y-2">
                         <li>Internet access for accessing course materials and tools</li>
                         <li>Device capable of viewing PDFs and web content</li>
                         <li>Basic web browser (Chrome, Firefox, Safari, or Edge)</li>
@@ -288,7 +175,7 @@
             <section id="texts" class="mb-8">
                 <h2 class="text-2xl font-bold mb-4">Required Texts and Materials</h2>
                 
-                <div class="bg-blue-50 rounded-lg p-6 mb-6">
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
                     <h3 class="text-lg font-semibold mb-2">How We'll Use Course Materials</h3>
                     <ul class="list-disc pl-6 space-y-2">
                         <li>Readings will be posted one week in advance in the LMS</li>
@@ -408,8 +295,9 @@
 </div>
 
 
-                    <div>
+                 
                         <h3 class="text-xl font-semibold mb-3">Free Digital Resources:</h3>
+                        <div class="bg-gray-50 rounded-lg p-6">
                         <ul class="list-disc pl-6 space-y-2 mb-6">
                             <li><a href="http://www.perseus.tufts.edu" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Perseus Digital Library<span class="text-sm" role="img" aria-label="external link">↗</span> <span class="visually-hidden">(opens in a new tab)</span></a></li>
                             <li><a href="http://www.poetryintranslation.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Poetry in Translation<span class="text-sm" role="img" aria-label="external link">↗</span>
@@ -438,12 +326,15 @@
                             <li>Euripides (trans. Svarlien). Medea. Hackett Publishing Company</li>
                             <li>Euripides (trans. Luschnig and Woodruff). Electra, Phoenician Women, Bacchae, and Iphigenia at Aulis. Hackett Publishing Company</li>
                             <li>Seneca (trans. Watson). Six Tragedies. Oxford University Press</li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
+</div>
+</div>
 <script>
     // Highlight active section in sidebar based on scroll position
     window.addEventListener('scroll', () => {
@@ -469,8 +360,8 @@
     });
     </script>
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 no-print">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <p class="text-gray-500 text-sm text-center">© 2024 CLCV 222. All rights reserved.</p>
-    </div>
-</footer>
+ <footer class="bg-white border-t border-gray-200 no-print w-full">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>
+        </div>
+    </footer>

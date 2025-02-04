@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policies - CLCV 222: The Tragic Spirit</title>
+    <title>Course Structure - CLCV 222: The Tragic Spirit</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm no-print">
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -19,15 +21,15 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">
-                        Print Policies
+                        Print Course Structure
                     </button>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <!-- Navigation -->
-    <nav class="bg-gray-800 no-print">
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
                 <div class="flex items-center">
@@ -44,9 +46,21 @@
         </div>
     </nav>
     
-    <div class="container flex">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">CLCV 222</span>
+                <span class="text-gray-300">/</span>
+                <span class="text-gray-900 font-medium">Course Structure</span>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Content Wrapper (Sidebar + Main Content) -->
+<div class="flex flex-grow min-h-0">
         <!-- Sidebar Navigation -->
-        <div class="sidebar no-print">
+    <aside class="sidebar">
             <nav class="sidebar-nav">
                 <a href="#supporting-success" class="sidebar-link">Supporting your Success</a>
                 <a href="#learning-support" class="sidebar-link">Learning Support</a>
@@ -58,49 +72,239 @@
                 <a href="#academic-integrity" class="sidebar-link">Academic Integrity</a>
                 <a href="#campus-resources" class="sidebar-link">Campus Resources</a>
             </nav>
-        </div>
+        </aside>
     
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <div class="bg-white rounded-lg shadow-sm p-6">
-                <h1 class="text-3xl font-bold mb-8">Course Policies and Resources</h1>
-                <section id="supporting-success" class="mb-12">
-                    <h2 class="text-2xl font-bold mb-4">Supporting your Success</h2>
-                    <p>I want everyone to succeed in this course! You've worked hard to be here and I want this to be an enjoyable experience for you.</p>
-                </section>
-                <section id="learning-support" class="mb-12">
-                    <h2 class="text-2xl font-bold mb-4">Learning Support</h2>
-                    <p>Course materials are available in multiple formats to accommodate diverse learning styles.</p>
-                </section>
-            </div>
-        </main>
-    </div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".sidebar-link");
+        <!-- Main Content -->
+            <div class="flex flex-col flex-grow">
+<main class="main-content flex-grow">
+   <div class="bg-white rounded-lg shadow-sm p-6"> 
+       <h1 class="text-3xl font-bold mb-8">Course Policies and Resources</h1>
+       <section id="supporting-success" class="mb-12">
+           <h2 class="text-2xl font-bold mb-4">Supporting your Success</h2>
+           <div class="bg-blue-50 rounded-lg p-6 mb-6">
+               <p class="mb-4">I want everyone to succeed in this course! You've worked hard to be here and I want this to be an enjoyable experience for you. Available support includes:</p>
+               
+               <h3 class="text-lg font-semibold mb-3">Academic Support</h3>
+               <ul class="list-disc pl-6 mb-4 space-y-2">
+                   <li>Writing Center consultations</li>
+                   <li>Research librarian assistance</li>
+                   <li>Study groups</li>
+                   <li>Technology support</li>
+                   <li>Tutoring services</li>
+               </ul>
 
-            function highlightActiveSection() {
-                let currentSection = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (window.scrollY >= sectionTop - 150) {
-                        currentSection = section.getAttribute("id");
-                    }
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    link.removeAttribute("aria-current");
-                    if (link.getAttribute("href").slice(1) === currentSection) {
-                        link.classList.add("active");
-                        link.setAttribute("aria-current", "page");
-                    }
-                });
-            }
-            window.addEventListener("scroll", highlightActiveSection);
-            highlightActiveSection();
+               <h3 class="text-lg font-semibold mb-3">Personal Support</h3>
+               <ul class="list-disc pl-6 mb-4 space-y-2">
+                   <li>Counselling services</li>
+                   <li>Food pantry</li>
+                   <li>Emergency financial aid</li>
+                   <li>Basic needs assistance</li>
+                   <li>Crisis support</li>
+               </ul>
+
+               <h3 class="text-lg font-semibold mb-3">Course-Specific Support</h3>
+               <ul class="list-disc pl-6 space-y-2">
+                   <li>Additional office hours by appointment</li>
+                   <li>Study guides</li>
+                   <li>Practice problems</li>
+                   <li>Review sessions</li>
+                   <li>Peer mentoring</li>
+               </ul>
+           </div>
+       </section>
+
+       <section id="learning-support" class="mb-12">
+           <h2 class="text-2xl font-bold mb-4">Learning Support and Flexibility</h2>
+           <div class="bg-gray-50 rounded-lg p-6">
+               <ul class="list-disc pl-6 space-y-2">
+                   <li>Course materials available in multiple formats (text, audio, digital)</li>
+                   <li>Choice in assignment formats (written, oral, visual, digital)</li>
+                   <li>Structured notes and study guides provided before class</li>
+                   <li>Recording of lectures available upon request</li>
+                   <li>Alternative participation options for class discussions</li>
+                   <li>Extended time options built into assignment design</li>
+                   <li>Regular comprehension checks during class sessions</li>
+               </ul>
+           </div>
+       </section>
+
+       <section id="accessibility" class="mb-12">
+           <h2 class="text-2xl font-bold mb-4">Accessibility</h2>
+           <div class="bg-blue-50 rounded-lg p-6">
+               <p class="mb-4">I am committed to creating an accessible learning environment for all students. This means:</p>
+               <ul class="list-disc pl-6 mb-6 space-y-2">
+                   <li>Multiple ways to access course content</li>
+                   <li>Flexible approaches to demonstrate your learning</li>
+                   <li>Clear instructions and expectations</li>
+                   <li>Proactive accommodations planning</li>
+                   <li>Regular breaks during class sessions</li>
+                   <li>Content warnings for sensitive material</li>
+                   <li>Technology accommodations as needed</li>
+               </ul>
+
+               <p class="mb-2">If you have a disability or any other circumstances that affect your learning:</p>
+               <ul class="list-disc pl-6 space-y-2">
+                   <li>You are encouraged to meet with me early in the semester</li>
+                   <li>We can develop a plan that works for you</li>
+                   <li>All discussions will remain confidential</li>
+                   <li>No documentation is required to request basic flexibility</li>
+               </ul>
+           </div>
+       </section>
+       ```html
+        <section id="communication" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Communication</h2>
+            <div class="bg-gray-50 rounded-lg p-6">
+                <p class="mb-4">Open communication is essential for your success:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Email is the best way to reach me</li>
+                    <li>I typically respond within 24 hours (M-F)</li>
+                    <li>Let me know if you'll miss class</li>
+                    <li>Reach out early if you're having difficulties</li>
+                    <li>Don't hesitate to ask for clarification or help</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="attendance" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Attendance and Participation</h2>
+            <div class="bg-blue-50 rounded-lg p-6">
+                <p class="mb-4">While attendance is important for your learning, I understand that life happens:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Notify me in advance about planned absences</li>
+                    <li>Contact me if you're unwell</li>
+                    <li>We can work together to keep you on track</li>
+                    <li>Missing class won't automatically lower your grade</li>
+                    <li>Multiple ways to demonstrate participation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="assignments" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Assignment Policies</h2>
+            <div class="bg-gray-50 rounded-lg p-6">
+                <p class="mb-4">I aim to be flexible while maintaining fairness:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Early feedback on initial assignments to help you adjust to course expectations</li>
+                    <li>Mid-semester individual check-ins to discuss your progress</li>
+                    <li>Draft reviews available for major assignments</li>
+                    <li>Multiple attempts allowed on certain assessments</li>
+                    <li>Two "no questions asked" 48-hour extensions</li>
+                    <li>Option to revise and resubmit one major assignment</li>
+                    <li>Weekly office hours for individual feedback</li>
+                    <li>Anonymous suggestion box for course improvements</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="technology" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Technology in the Classroom</h2>
+            <div class="bg-blue-50 rounded-lg p-6">
+                <p class="mb-4">This course uses technology to enhance learning while being mindful of potential distractions.</p>
+                
+                <h3 class="text-lg font-semibold mb-3">Encouraged Uses</h3>
+                <ul class="list-disc pl-6 mb-6 space-y-2">
+                    <li>Taking notes</li>
+                    <li>Accessing course readings</li>
+                    <li>Collaborative activities</li>
+                    <li>Research during designated times</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold mb-3">Guidelines</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Mute all notifications during class</li>
+                    <li>Use technology primarily for course-related activities</li>
+                    <li>Be mindful of how your technology use might affect others</li>
+                    <li>Let me know if you need technological accommodations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="academic-integrity" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Academic Integrity</h2>
+            <div class="bg-gray-50 rounded-lg p-6">
+                <p class="mb-4">In this course, academic integrity means:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Properly citing sources in your work</li>
+                    <li>Submitting your own original analysis</li>
+                    <li>Contributing equitably to group work</li>
+                    <li>Respecting intellectual property rights</li>
+                    <li>Asking questions when unsure about citation practices</li>
+                </ul>
+                <p class="mt-4">I'm happy to discuss any questions about proper citation and collaboration.</p>
+            </div>
+        </section>
+
+        <section id="campus-resources" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Additional Campus Resources</h2>
+            <div class="bg-blue-50 rounded-lg p-6">
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Writers Workshop for writing support</li>
+                    <li>Library Subject Guides for research help</li>
+                    <li>Counseling Center for personal support</li>
+                    <li>McKinley Health for medical services</li>
+                    <li>Emergency Dean for crisis situations</li>
+                </ul>
+            </div>
+        </section>
+                   <!-- Button -->
+<button id="backToTop" 
+class="fixed bottom-20 right-8 bg-gray-800 p-3 rounded-full opacity-0 transition-opacity duration-300 hover:bg-gray-700 z-50" aria-label="Back to top">    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        aria-label="Back to top of page"
+        aria-hidden="true"
+        tabindex="1"
+        <rect x="10" y="6" width="4" height="18" fill="white"/>
+        <rect x="6" y="2" width="12" height="4" fill="white"/>
+        <path d="M4 4 H20 V6 H4 V4" fill="white"/>
+    </svg>
+</button>
+   </main>    
+   <!-- Footer -->
+<footer class="bg-white border-t border-gray-200 no-print z-40">        
+<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>
+        </div>
+    </footer>
+    <script>
+    // back to top
+    window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.opacity = '1';
+    } else {
+        button.style.opacity = '0';
+    }
+};
+
+document.getElementById('backToTop').onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+     // Highlight active section in sidebar based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+
+                if (link.getAttribute('href').slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
-</body>
+    </body>
 </html>
+

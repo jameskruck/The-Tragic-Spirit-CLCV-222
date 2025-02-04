@@ -8,8 +8,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm no-print">
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -19,15 +21,15 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">
-                        Print Syllabus
+                        Print Course Structure
                     </button>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <!-- Navigation -->
-    <nav class="bg-gray-800 no-print">
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
                 <div class="flex items-center">
@@ -43,81 +45,238 @@
             </div>
         </div>
     </nav>
-    
-    <div class="container flex">
-        <!-- Sidebar Navigation -->
-        <div class="sidebar no-print">
-            <nav class="sidebar-nav">
-                <a href="#pre-course" class="sidebar-link">Pre-Course Survey</a>
-                <a href="#reading-process" class="sidebar-link">Guided Reading Process</a>
-                <a href="#discussion-board" class="sidebar-link">Cultural Connections Board</a>
-                <a href="#support" class="sidebar-link">Learning Support</a>
-            </nav>
-        </div>
-    
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <div class="bg-white rounded-lg shadow-sm p-6">
-                <!-- Pre-Course Survey -->
-                <section id="pre-course" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Pre-Course Survey</h2>
-                    <div class="bg-blue-50 rounded-lg p-6">
-                        <p class="mb-4">Before our first class meeting, you'll receive a link to complete an anonymous <a href="whos-in-class-survey.html" class="text-blue-600 hover:text-blue-800 underline">"Who's in Class?" survey.</a></p>
-                    </div>
-                </section>
-    
-                <!-- Guided Reading Process -->
-                <section id="reading-process" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Guided Reading Process</h2>
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <p class="mb-4">Each week follows a structured reading and discussion process:</p>
-                    </div>
-                </section>
-    
-                <!-- Cultural Connections Board -->
-                <section id="discussion-board" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Cultural Connections Discussion Board</h2>
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <p class="mb-4">Our <a href="cultural-connections-board.html" class="text-blue-600 hover:text-blue-800 underline">online discussion board</a> allows for multimedia responses and rich discussions.</p>
-                    </div>
-                </section>
-    
-                <!-- Learning Support -->
-                <section id="support" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Learning Support</h2>
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <p class="mb-4">Support services include tutoring, writing assistance, and accessibility options.</p>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".sidebar-link");
 
-            function highlightActiveSection() {
-                let currentSection = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (window.scrollY >= sectionTop - 150) {
-                        currentSection = section.getAttribute("id");
-                    }
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    link.removeAttribute("aria-current");
-                    if (link.getAttribute("href").slice(1) === currentSection) {
-                        link.classList.add("active");
-                        link.setAttribute("aria-current", "page");
-                    }
-                });
-            }
-            window.addEventListener("scroll", highlightActiveSection);
-            highlightActiveSection();
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">CLCV 222</span>
+                <span class="text-gray-300">/</span>
+                <span class="text-gray-900 font-medium">Course Structure</span>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Content Wrapper (Sidebar + Main Content) -->
+<div class="flex flex-grow min-h-0">
+        <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#survey" class="sidebar-link">Pre-Course Survey</a>
+                <a href="#guided-reading" class="sidebar-link">Guided Reading Process</a>
+                <a href="#cultural" class="sidebar-link">Cultural Connections Discussion Board</a>
+                <a href="#learning" class="sidebar-link">Learning Support</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+            <div class="flex flex-col flex-grow">
+<main class="main-content flex-grow">
+    <div class="bg-white rounded-lg shadow-sm p-6">           
+    <!-- Pre-Course Survey -->
+            <section id="survey" class="mb-8"> 
+                <h2 class="text-2xl font-bold mb-4">Pre-Course Survey</h2>
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <p class="mb-4">Before our first class meeting, you'll receive a link to complete an anonymous <a href="whos-in-class-survey.html" class="text-blue-600 hover:text-blue-800 underline">"Who's in Class?" survey.</a> This survey:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Helps me understand our class community's diverse needs and experiences</li>
+                        <li>Is completely voluntary and anonymous</li>
+                        <li>Takes about 10-15 minutes to complete</li>
+                        <li>Allows you to skip any questions you prefer not to answer</li>
+                        <li>Results are only viewed in aggregate form</li>
+                    </ul>
+                    <p class="mt-4">Time will be provided during our first class session if you haven't had a chance to complete it beforehand.</p>
+                </div>
+            </section>
+
+            <!-- Guided Reading Process -->
+            <section id="guided-reading" class="mb-8"> 
+                <h2 class="text-2xl font-bold mb-4">Guided Reading Process</h2>
+                <div class="bg-gray-50 rounded-lg p-6">
+                           <p class="mb-4">To help you engage effectively with course readings and prepare for class discussions, we'll use our <a href="guided-reading-template.html" class="text-blue-600 hover:text-blue-800 underline">digital guided reading tool.</a> Each week follows a structured reading and discussion process:</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Before Class</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Access readings and guided reading template one week in advance</li>
+                                <li>Complete structured reading response using our digital tool</li>
+                                <li>Submit responses by 9am on class days</li>
+                                <li>Review any instructor feedback or discussion prompts</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">During Class</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Opening Discussion (5-7 minutes)
+                                    <ul class="list-disc pl-6 mt-2">
+                                        <li>Address questions from guided reading responses</li>
+                                        <li>Connect to previous class concepts</li>
+                                    </ul>
+                                </li>
+                                <li>Primary Topic Exploration (15-20 minutes)
+                                    <ul class="list-disc pl-6 mt-2">
+                                        <li>Build on prepared readings</li>
+                                        <li>Introduce new concepts</li>
+                                    </ul>
+                                </li>
+                                <li>Brain Break (3-5 minutes)
+                                    <ul class="list-disc pl-6 mt-2">
+                                        <li>Quick stretch</li>
+                                        <li>Brief reflection</li>
+                                        <li>Partner check-in</li>
+                                    </ul>
+                                </li>
+                                <li>Application/Activity (15-20 minutes)
+                                    <ul class="list-disc pl-6 mt-2">
+                                        <li>Small group discussion</li>
+                                        <li>Textual evidence analysis</li>
+                                        <li>Concept application exercises</li>
+                                    </ul>
+                                </li>
+                                <li>Wrap-up and Preview (5 minutes)
+                                    <ul class="list-disc pl-6 mt-2">
+                                        <li>Synthesize key points</li>
+                                        <li>Preview next class preparation</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">After Class</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Review and update your notes based on class discussion</li>
+                                <li>Continue discussions on Cultural Connections Board</li>
+                                <li>Begin preparation for next class session</li>
+                                <li>Schedule office hours if needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cultural Connections Board -->
+            <section id="cultural" class="mb-8"> 
+                <h2 class="text-2xl font-bold mb-4">Cultural Connections Discussion Board</h2>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <p class="mb-4">Our <a href="cultural-connections-board.html" class="text-blue-600 hover:text-blue-800 underline">online discussion board </a>serves several purposes:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Share personal cultural connections to readings</li>
+                        <li>Discuss contemporary adaptations and interpretations</li>
+                        <li>Explore cross-cultural perspectives on themes</li>
+                        <li>Build community through asynchronous dialogue</li>
+                    </ul>
+                    <p class="mt-4">The board allows for multimedia responses including text, links, and images to support rich discussion.</p>
+                </div>
+            </section>
+
+            <!-- Learning Support -->
+            <section id="learning" class="mb-8"> 
+                <h2 class="text-2xl font-bold mb-4">Learning Support</h2>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Academic Support</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Writing Center consultations</li>
+                                <li>Research librarian assistance</li>
+                                <li>Study groups</li>
+                                <li>Technology support</li>
+                                <li>Tutoring services</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Course-Specific Support</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Additional office hours by appointment</li>
+                                <li>Study guides</li>
+                                <li>Practice problems</li>
+                                <li>Review sessions</li>
+                                <li>Peer mentoring</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Accessibility Support</h3>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Course materials in multiple formats</li>
+                                <li>Alternative participation options</li>
+                                <li>Extended time options built into assignment design</li>
+                                <li>Regular comprehension checks</li>
+                                <li>Content warnings for sensitive material</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+                           <!-- Button -->
+<button id="backToTop" 
+class="fixed bottom-20 right-8 bg-gray-800 p-3 rounded-full opacity-0 transition-opacity duration-300 hover:bg-gray-700 z-50" aria-label="Back to top">    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        aria-label="Back to top of page"
+        aria-hidden="true"
+        tabindex="1"
+        <rect x="10" y="6" width="4" height="18" fill="white"/>
+        <rect x="6" y="2" width="12" height="4" fill="white"/>
+        <path d="M4 4 H20 V6 H4 V4" fill="white"/>
+    </svg>
+</button>
+    </main>
+</div>
+</div>
+
+    <!-- Footer -->
+<footer class="bg-white border-t border-gray-200 no-print w-full">
+    <div class="py-6 px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>
+    </div>
+</footer>
+
+
+
+     <script>
+    // back to top
+    window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.opacity = '1';
+    } else {
+        button.style.opacity = '0';
+    }
+};
+
+document.getElementById('backToTop').onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+     // Highlight active section in sidebar based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+
+                if (link.getAttribute('href').slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
-</body>
+    </body>
+    </body>
 </html>

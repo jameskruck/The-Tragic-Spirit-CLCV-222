@@ -8,8 +8,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm no-print">
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -19,14 +21,14 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     <button onclick="window.print()" class="text-gray-600 hover:text-gray-900">
-                        Print Schedule
+                        Print Course Schedule
                     </button>
                 </div>
             </div>
         </nav>
     </header>
-<!-- Navigation -->
-<nav class="bg-gray-800 no-print">
+<!-- Main Navigation -->
+<nav class="main-nav no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-12">
             <div class="flex items-center">
@@ -44,7 +46,7 @@
 </nav>
 
 <!-- Breadcrumbs -->
-<nav class="bg-white shadow-sm no-print">
+<nav class="breadcrumb-nav no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center space-x-2 h-10 text-sm">
             <span class="text-gray-500">CLCV 222</span>
@@ -53,8 +55,23 @@
         </div>
     </div>
 </nav>
-    <main class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-lg shadow-sm p-6">
+
+        <!-- Content Wrapper (Sidebar + Main Content) -->
+<div class="flex flex-grow min-h-0">
+        <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#weeks1-3" class="sidebar-link">Weeks 1-3</a>
+                <a href="#weeks4-6" class="sidebar-link">Weeks 4-6</a>
+                <a href="#weeks7-9" class="sidebar-link">Weeks 7-9</a>
+                <a href="#weeks10-13" class="sidebar-link">Weeks 10-13</a>
+                <a href="#weeks14-16" class="sidebar-link">Weeks 14-16</a>
+            </nav>
+        </aside>
+  <!-- Main Content -->
+    <div class="flex flex-col flex-grow">
+        <main class="main-content flex-grow">
+            <div class="bg-white rounded-lg shadow-sm p-6">
             <h1 class="text-3xl font-bold mb-8">Course Schedule</h1>
             
             <div class="note mb-6 bg-blue-50 p-4 rounded">
@@ -64,7 +81,7 @@
             </div>
 
             <!-- Weeks 1-3 -->
-            <details>
+            <details id="weeks1-3">
                 <summary>
                     <h2 class="text-2xl font-bold text-gray-800 inline">Introducing Tragedy and Cultural Perspectives (Weeks 1-3)</h2>
                 </summary>
@@ -124,7 +141,7 @@
             </details>
 
             <!-- Weeks 4-6 -->
-            <details>
+<details id="weeks4-6">
                 <summary>
                     <h2 class="text-2xl font-bold text-gray-800 inline"> Justice and Transformation (Weeks 4-6)</h2>
                 </summary>
@@ -178,7 +195,7 @@
             </details>
 
             <!-- Weeks 7-9 -->
-            <details>
+            <details id="weeks7-9">
                 <summary>
                     <h2 class="text-2xl font-bold text-gray-800 inline">Fate and Individual Choice (Weeks 7-9)</h2>
                 </summary>
@@ -234,7 +251,7 @@
             </details>
 
             <!-- Weeks 10-13 -->
-            <details>
+            <details id="weeks10-13">
                 <summary>
                     <h2 class="text-2xl font-bold text-gray-800 inline">Gender and Power (Weeks 10-13)</h2>
                 </summary>
@@ -298,7 +315,7 @@
            </details>
 
            <!-- Weeks 14-16 -->
-           <details>
+           <details id="weeks14-16">
                <summary>
                    <h2 class="text-2xl font-bold text-gray-800 inline">Roman Reception and Transformation (Weeks 14-16)</h2>
                </summary>
@@ -334,11 +351,106 @@
                </div>
            </details>
        </div>
-   </main>    <!-- Footer -->
- <footer class="bg-white border-t border-gray-200 no-print">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+       <!-- Button -->
+<button id="backToTop" 
+class="fixed bottom-20 right-8 bg-gray-800 p-3 rounded-full opacity-0 transition-opacity duration-300 hover:bg-gray-700 z-50" aria-label="Back to top">    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        aria-label="Back to top of page"
+        aria-hidden="true"
+        tabindex="1"
+        <rect x="10" y="6" width="4" height="18" fill="white"/>
+        <rect x="6" y="2" width="12" height="4" fill="white"/>
+        <path d="M4 4 H20 V6 H4 V4" fill="white"/>
+    </svg>
+</button>
+   </main>    
+   <!-- Footer -->
+<footer class="bg-white border-t border-gray-200 no-print z-40">        
+<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <p class="text-center text-sm text-gray-500">Spring 2025 • University of Illinois at Urbana-Champaign</p>
         </div>
     </footer>
+    <script>
+    // back to top
+    window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.opacity = '1';
+    } else {
+        button.style.opacity = '0';
+    }
+};
+
+document.getElementById('backToTop').onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+    // Highlight active section in sidebar based on scroll position
+    window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.opacity = '1';
+        button.setAttribute('aria-hidden', 'false');
+        button.setAttribute('tabindex', '0');
+    } else {
+        button.style.opacity = '0';
+        button.setAttribute('aria-hidden', 'true');
+        button.setAttribute('tabindex', '-1');
+    }
+};
+const handleSectionHighlight = () => {
+    const sections = document.querySelectorAll('details');
+    const navLinks = document.querySelectorAll('.sidebar-link');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === currentSection) {
+            link.classList.add('active');
+        }
+    });
+};
+
+document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = link.getAttribute('href').slice(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection && targetSection.tagName === 'DETAILS') {
+            targetSection.open = true;
+            const yOffset = -170; 
+            const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    });
+});
+
+window.addEventListener('scroll', handleSectionHighlight);
+window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.opacity = '1';
+    } else {
+        button.style.opacity = '0';
+    }
+};
+
+document.getElementById('backToTop').onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+</script>
 </body>
 </html>

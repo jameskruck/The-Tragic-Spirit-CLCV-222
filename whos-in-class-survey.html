@@ -19,27 +19,71 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4">
-    <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <div class="text-center mb-6">
-                <h1 class="text-2xl font-bold mb-2">Who's in Class? Survey</h1>
-                <p class="text-gray-600">CLCV 222: The Tragic Spirit</p>
-                <p class="text-gray-600">Spring 2025</p>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+  <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="bg-blue-50 p-4 rounded mb-6">
-                <p class="mb-2">This survey helps create an inclusive learning environment by letting me understand our class community better. Your responses will:</p>
-                <ul class="list-disc pl-6 space-y-1">
-                    <li>Be completely anonymous</li>
-                    <li>Be viewed only in aggregate form</li>
-                    <li>Help inform course design and teaching approaches</li>
-                    <li>Be deleted after the course ends</li>
-                </ul>
-                <p class="mt-2 text-sm">Completing this survey is voluntary. You may skip any questions you prefer not to answer.</p>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex items-center">
+                    <div class="flex space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="overview.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Overview</a>
+                        <a href="structure.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Structure</a>
+                        <a href="assignments.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Assignments</a>
+                        <a href="schedule.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                        <a href="policies.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Policies</a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </nav>
 
-            <div id="survey-form">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">CLCV 222</span>
+            </div>
+        </div>
+    </nav>
+
+<!-- Content Wrapper -->
+<div class="flex flex-grow min-h-0">
+    <!-- Main Content -->
+    <div class="flex flex-col flex-grow">
+        <main class="main-content flex-grow">
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h1 class="text-2xl font-bold mb-4">Who's in Class? Survey</h1>
+                
+                <!-- Survey Instructions -->
+                <div class="bg-blue-50 p-4 rounded mb-6">
+                    <p class="mb-2">This survey helps create an inclusive learning environment by letting me understand our class community better. Your responses will:</p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Be completely anonymous</li>
+                        <li>Be viewed only in aggregate form</li>
+                        <li>Help inform course design and teaching approaches</li>
+                        <li>Be deleted after the course ends</li>
+                    </ul>
+                    <p class="mt-2 text-sm">Completing this survey is voluntary. You may skip any questions you prefer not to answer.</p>
+                </div>
+
+                <div id="survey-form">
                 <!-- Section I -->
                 <div id="section1" class="form-section active">
                     <h2 class="text-xl font-semibold mb-4">Section I: Academic Context</h2>

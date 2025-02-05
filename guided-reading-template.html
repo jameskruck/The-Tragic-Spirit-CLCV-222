@@ -7,9 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm no-print">
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
@@ -25,9 +37,9 @@
             </div>
         </nav>
     </header>
-    
-    <!-- Navigation -->
-    <nav class="bg-gray-800 no-print">
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-12">
                 <div class="flex items-center">
@@ -43,62 +55,238 @@
             </div>
         </div>
     </nav>
-    
-    <div class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold mb-6">Guided Reading Assignment</h1>
-        
-        <!-- Tab Navigation -->
-        <div class="border-b mb-4">
-            <ul class="flex flex-wrap -mb-px" id="tabList" role="tablist">
-                <li class="mr-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button active" 
-                            id="elos-tab" 
-                            data-target="elos-content">
-                        Learning Outcomes
-                    </button>
-                </li>
-                <li class="mr-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                            id="purpose-tab" 
-                            data-target="purpose-content">
-                        Purpose
-                    </button>
-                </li>
-                <li class="mr-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-button" 
-                            id="tasks-tab" 
-                            data-target="tasks-content">
-                        Tasks
-                    </button>
-                </li>
-            </ul>
-        </div>
 
-        <!-- Tab Content -->
-        <div class="tab-content">
-            <div id="elos-content" class="tab-pane active">
-                <div class="bg-gray-50 p-4 rounded mb-4">
-                    <h2 class="text-xl font-semibold mb-3">Expected Learning Outcomes</h2>
-                    <p class="mb-3">After completing this guided reading, you will be able to:</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>Analyze classical texts through close reading and critical interpretation</li>
-                        <li>Identify key themes and concepts in relation to cultural contexts</li>
-                    </ul>
-                </div>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">CLCV 222</span>
             </div>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow">
+            <main class="main-content flex-grow">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-2xl font-bold mb-4">Guided Reading Assignment</h1>
+
+                    <!-- Introduction Section -->
+                    <div id="section1" class="form-section active">
+                        <div class="bg-gray-50 p-4 rounded mb-4">
+                            <h2 class="text-xl font-semibold mb-3">Expected Learning Outcomes</h2>
+                            <p class="mb-3">After completing this guided reading, you will be able to:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Analyze classical texts through close reading and critical interpretation</li>
+                                <li>Identify key themes and concepts in relation to cultural contexts</li>
+                                <li>Develop connections between ancient texts and contemporary discussions</li>
+                                <li>Articulate your own cultural perspective in relation to the text</li>
+                            </ul>
+                        </div>
+                        <button onclick="nextSection(1)" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                            Next Section
+                        </button>
+                    </div>
+
+                    <!-- Purpose Section -->
+                    <div id="section2" class="form-section">
+                        <div class="bg-gray-50 p-4 rounded mb-4">
+                            <h2 class="text-xl font-semibold mb-3">Purpose</h2>
+                            <p class="mb-3">This guided reading process develops critical skills that extend beyond the classroom:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Analytical reading strategies applicable to any complex text</li>
+                                <li>Cultural awareness and comparative analysis abilities</li>
+                                <li>Self-directed learning and metacognitive skills</li>
+                                <li>Evidence-based argumentation and interpretation</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 space-x-4">
+                            <button onclick="prevSection(2)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                                Previous
+                            </button>
+                            <button onclick="nextSection(2)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                                Next Section
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Knowledge & Skills Section -->
+                    <div id="section3" class="form-section">
+                        <div class="bg-gray-50 p-4 rounded mb-4 space-y-4">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Knowledge:</h3>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Understanding of classical tragic themes and forms</li>
+                                    <li>Recognition of cultural contexts and influences</li>
+                                    <li>Awareness of diverse interpretive approaches</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Skills:</h3>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Close reading and textual analysis</li>
+                                    <li>Cross-cultural comparison and interpretation</li>
+                                    <li>Critical reflection and self-assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-x-4">
+                            <button onclick="prevSection(3)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                                Previous
+                            </button>
+                            <button onclick="nextSection(3)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                                Next Section
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Before Reading Section -->
+                    <div id="section4" class="form-section">
+                        <h2 class="text-xl font-semibold mb-4">Before Reading</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block font-medium mb-2">Reading Goals</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="What do you hope to learn from this text?"
+                                    data-save="before-goals"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Initial Questions</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="What questions do you have before starting?"
+                                    data-save="before-questions"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-x-4">
+                            <button onclick="prevSection(4)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                                Previous
+                            </button>
+                            <button onclick="nextSection(4)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                                Next Section
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- During Reading Section -->
+                    <div id="section5" class="form-section">
+                        <h2 class="text-xl font-semibold mb-4">During Reading</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block font-medium mb-2">Key Terms & Themes</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="Note important terms, concepts, and themes..."
+                                    data-save="during-terms"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Cultural Connections</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="How does this connect to your cultural experience?"
+                                    data-save="during-connections"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-x-4">
+                            <button onclick="prevSection(5)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                                Previous
+                            </button>
+                            <button onclick="nextSection(5)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                                Next Section
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- After Reading Section -->
+                    <div id="section6" class="form-section">
+                        <h2 class="text-xl font-semibold mb-4">After Reading</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block font-medium mb-2">Reflection</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="How has your understanding developed?"
+                                    data-save="after-reflection"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <label class="block font-medium mb-2">Discussion Questions</label>
+                                <textarea 
+                                    class="w-full border rounded p-2 min-h-[100px]"
+                                    placeholder="What would you like to discuss in class?"
+                                    data-save="after-questions"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-x-4">
+                            <button onclick="prevSection(6)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                                Previous
+                            </button>
+                            <button onclick="submitReading()" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+                                Submit Reading Response
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
 
     <script>
-        // Tab switching functionality
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
-                button.classList.add('active');
-                document.getElementById(button.getAttribute('data-target')).classList.remove('hidden');
+        function nextSection(currentSection) {
+            document.getElementById(`section${currentSection}`).classList.remove('active');
+            document.getElementById(`section${currentSection + 1}`).classList.add('active');
+        }
+
+        function prevSection(currentSection) {
+            document.getElementById(`section${currentSection}`).classList.remove('active');
+            document.getElementById(`section${currentSection - 1}`).classList.add('active');
+        }
+
+        // Auto-save functionality
+        document.querySelectorAll('[data-save]').forEach(element => {
+            // Load saved content
+            const savedContent = localStorage.getItem(element.getAttribute('data-save'));
+            if (savedContent) {
+                element.value = savedContent;
+            }
+
+            // Save content on change
+            element.addEventListener('input', (e) => {
+                localStorage.setItem(
+                    e.target.getAttribute('data-save'),
+                    e.target.value
+                );
             });
         });
+
+        // Submit functionality
+        function submitReading() {
+            // Collect all responses
+            const responses = {};
+            document.querySelectorAll('[data-save]').forEach(element => {
+                responses[element.getAttribute('data-save')] = element.value;
+            });
+
+            // In a real implementation, this would send data to a server
+            // For now, we'll show a confirmation message
+            alert('Thank you! Your reading response has been submitted.');
+            
+            // Optionally clear the form after submission
+            if (confirm('Would you like to clear the form?')) {
+                document.querySelectorAll('[data-save]').forEach(element => {
+                    element.value = '';
+                    localStorage.removeItem(element.getAttribute('data-save'));
+                });
+            }
+        }
     </script>
 </body>
 </html>

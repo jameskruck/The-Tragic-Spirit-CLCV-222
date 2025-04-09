@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's in Class? Survey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+  <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">CLCV 222: The Tragic Spirit</h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex items-center">
+                    <div class="flex space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="overview.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Overview</a>
+                        <a href="structure.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Course Structure</a>
+                        <a href="assignments.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Assignments</a>
+                        <a href="schedule.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                        <a href="policies.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Policies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">CLCV 222</span>
+            </div>
+        </div>
+    </nav>
+
+<!-- Content Wrapper -->
+<div class="flex flex-grow min-h-0">
+    <!-- Main Content -->
+    <div class="flex flex-col flex-grow">
+        <main class="main-content flex-grow">
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h1 class="text-2xl font-bold mb-4">Who's in Class? Survey</h1>
+                
+                <!-- Survey Instructions -->
+                <div class="bg-blue-50 p-4 rounded mb-6">
+                    <p class="mb-2">This survey helps create an inclusive learning environment by letting me understand our class community better. Your responses will:</p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Be completely anonymous</li>
+                        <li>Be viewed only in aggregate form</li>
+                        <li>Help inform course design and teaching approaches</li>
+                        <li>Be deleted after the course ends</li>
+                    </ul>
+                    <p class="mt-2 text-sm">Completing this survey is voluntary. You may skip any questions you prefer not to answer.</p>
+                </div>
+
+                <div id="survey-form">
+                <!-- Section I -->
+                <div id="section1" class="form-section active">
+                    <h2 class="text-xl font-semibold mb-4">Section I: Academic Context</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I work on or off campus
+                            </label>
+                            <input type="number" placeholder="Hours per week" class="ml-6 border rounded p-1" min="0">
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I play on a varsity athletics team
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I live off campus
+                            </label>
+                            <input type="text" placeholder="Commute time" class="ml-6 border rounded p-1">
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I am over 25 years of age
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I am on active duty or a veteran
+                            </label>
+                        </div>
+                    </div>
+                    <button onclick="nextSection(1)" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Next Section
+                    </button>
+                </div>
+
+                <!-- Section II -->
+                <div id="section2" class="form-section">
+                    <h2 class="text-xl font-semibold mb-4">Section II: Resources & Access</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I have a mobile device with WIFI capability
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I have a laptop or desktop computer that I can use for class work
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I am financially capable of purchasing all required materials without hardship
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I may need information about course material cost support or options
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-x-4">
+                        <button onclick="prevSection(2)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                            Previous
+                        </button>
+                        <button onclick="nextSection(2)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                            Next Section
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Section III -->
+                <div id="section3" class="form-section">
+                    <h2 class="text-xl font-semibold mb-4">Section III: Learning Context</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I have a disability (invisible or visible)
+                            </label>
+                            <textarea 
+                                placeholder="Optional: Share any information about accommodations that would help you succeed"
+                                class="w-full border rounded p-2 mt-2"
+                                rows="2"
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I have health concerns that may impact my participation
+                            </label>
+                            <textarea 
+                                placeholder="Optional: Share any health concerns you'd like me to know about"
+                                class="w-full border rounded p-2 mt-2"
+                                rows="2"
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I am a "quiet" student (I reenergize from having time alone)
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I have dependents that I take care of outside of school
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                I prefer typing assignments over handwriting
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-x-4">
+                        <button onclick="prevSection(3)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                            Previous
+                        </button>
+                        <button onclick="nextSection(3)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                            Next Section
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Section IV -->
+                <div id="section4" class="form-section">
+                    <h2 class="text-xl font-semibold mb-4">Section IV: Cultural & Personal Context</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Racial/ethnic background:</label>
+                            <input type="text" class="w-full border rounded p-2">
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">Gender identity:</label>
+                            <input type="text" class="w-full border rounded p-2">
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">Pronouns:</label>
+                            <input type="text" class="w-full border rounded p-2">
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">Country of origin:</label>
+                            <input type="text" class="w-full border rounded p-2">
+                        </div>
+
+                        <div>
+                            <label class="block mb-2">
+                                <input type="checkbox" class="mr-2">
+                                English is not my first language
+                            </label>
+                            <textarea 
+                                placeholder="Optional: Share your proficiency level in reading/writing/speaking"
+                                class="w-full border rounded p-2 mt-2"
+                                rows="2"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-x-4">
+                        <button onclick="prevSection(4)" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                            Previous
+                        </button>
+                        <button onclick="submitForm()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                            Submit Survey
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Thank You Screen -->
+                <div id="thank-you" class="form-section">
+                    <div class="text-center py-8">
+                        <h2 class="text-2xl font-bold mb-4">Thank You!</h2>
+                        <p class="mb-4">Your responses will help create a more inclusive learning environment.</p>
+                        <p>You may now close this window.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextSection(currentSection) {
+            document.getElementById(`section${currentSection}`).classList.remove('active');
+            document.getElementById(`section${currentSection + 1}`).classList.add('active');
+        }
+
+        function prevSection(currentSection) {
+            document.getElementById(`section${currentSection}`).classList.remove('active');
+            document.getElementById(`section${currentSection - 1}`).classList.add('active');
+        }
+
+        function submitForm() {
+            // In a real implementation, this would send data to a secure server
+            // For demo purposes, we'll just show the thank you screen
+            document.getElementById('section4').classList.remove('active');
+            document.getElementById('thank-you').classList.add('active');
+        }
+    </script>
+</body>
+</html>
